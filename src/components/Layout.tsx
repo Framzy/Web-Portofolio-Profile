@@ -1,11 +1,12 @@
 import { Link, Outlet } from "react-router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Layout() {
   return (
     <>
-      <nav className="bg-gray-800 flex justify-between items-center py-4 px-8">
-        <h1 className="text-white font-bold">FRAMZY.</h1>
-        <ul className="text-white font-normal flex justify-start gap-5">
+      <nav className="bg-[#0A090F] flex justify-between items-center h-[60px]">
+        <h1 className="text-white font-bold ml-20">FRAMZY.</h1>
+        <ul className="text-white flex  gap-5 font-light text-sm">
           <li className="text-[#FDE63D]">
             <Link to="/">ABOUT</Link>
           </li>
@@ -17,13 +18,15 @@ function Layout() {
           </li>
           <li>
             <Link to="/">
-              CONNECT <i className="fa-brands fa-linkedin"></i>
+              <p>
+                CONNECT <FontAwesomeIcon icon={["fas", "caret-down"]} />
+              </p>
             </Link>
           </li>
         </ul>
         <button
           type="button"
-          className="bg-white text-black hover:bg-blue-700 font-medium py-2 px-8 rounded"
+          className="bg-white text-[#0A090F] font-medium h-12 w-60 mr-2 rounded cursor-pointer hover:bg-[#FDE63D] "
         >
           DONWLOAD CV
         </button>
