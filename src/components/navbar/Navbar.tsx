@@ -4,9 +4,9 @@ import { Link } from "react-router";
 export default function Navbar() {
   return (
     <>
-      <nav className="bg-[#0A090F] flex justify-between items-center h-[60px] ">
+      <nav className="bg-[#0A090F] flex justify-between items-center h-16 border-b border-[#8A8A8A]">
         <h1 className="text-white font-bold font-vollkorn ml-20">FRAMZY.</h1>
-        <ul className="text-white flex  gap-5 font-light text-sm">
+        <ul className="text-white flex gap-8 font-manrope text-[12px]">
           <li className="text-[#39EEFA]">
             <Link to="/">ABOUT</Link>
           </li>
@@ -26,7 +26,7 @@ export default function Navbar() {
         </ul>
         <button
           type="button"
-          className="bg-white text-[#0A090F] font-medium h-12 w-60 mr-2 rounded cursor-pointer hover:bg-[#39EEFA] "
+          className="bg-white text-[#0A090F] font-medium text-sm h-11 w-60 mr-2 rounded cursor-pointer hover:bg-[#39EEFA] "
         >
           DONWLOAD CV
         </button>
