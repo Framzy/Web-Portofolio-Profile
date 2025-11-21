@@ -4,6 +4,7 @@
 @theme {
   --font-vollkorn: "Vollkorn", serif;
   --font-manrope: "Manrope", sans-serif;
+  --text-primary-color: #39eefa;
 }
 
 body {

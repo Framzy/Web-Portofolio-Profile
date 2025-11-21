@@ -4,7 +4,7 @@ import { Link } from "react-router";
 export default function Navbar() {
   return (
     <>
-      <nav className="bg-[#0A090F] flex justify-between items-center h-16 border-b border-[#8A8A8A]">
+      <nav className="bg-[#0A090F] flex justify-between items-center h-16 border-b border-[#8A8A8A] sticky top-0">
         <h1 className="text-white font-bold font-vollkorn ml-20">FRAMZY.</h1>
         <ul className="text-white flex gap-8 font-manrope text-[12px]">
           <li className="text-[#39EEFA]">
