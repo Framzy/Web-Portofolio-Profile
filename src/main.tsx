@@ -1,18 +1,18 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // react-router-dom
 import "./styles/index.css";
 import "./fontawesome/icons";
-import Layout from "./components/Layout.tsx";
-import ErrorPage from "./pages/error/ErrorPage.tsx";
-import Content from "./components/Content.tsx";
+import Layout from "./components/Layout";
+import ErrorPage from "./pages/error/ErrorPage";
+import Content from "./components/Content";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Content />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Content />} />
         </Route>
 
         <Route path="*" element={<ErrorPage />} />
