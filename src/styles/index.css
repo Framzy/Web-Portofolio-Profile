@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
 @theme {
   --font-vollkorn: "Vollkorn", serif;
   --font-manrope: "Manrope", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
   --text-primary-color: #39eefa;
 }
 

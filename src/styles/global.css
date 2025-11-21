@@ -1,0 +1,45 @@
+.about-content {
+  background-image: url("../images/background/BG.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutMe-line {
+  position: relative;
+}
+
+.aboutMe-line::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 15%;
+  top: 15px;
+  right: 35%;
+  background-color: #a8a8a8;
+}
+.aboutMe-line::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 35%;
+  top: 14px;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.aboutMe-name-line {
+  position: relative;
+}
+
+.aboutMe-name-line::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 40px;
+  bottom: -25px;
+  left: 0;
+  background-color: #39eefa;
+}
