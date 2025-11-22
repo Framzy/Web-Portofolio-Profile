@@ -65,12 +65,27 @@ export default function About({ sectionRef }: Props) {
               />
             </div>
             <div className="flex flex-col font-manrope h-fit gap-1">
-              <p className="text-[#39EEFA] text-md">Education</p>
-              <p className="text-white text-sm">
-                University Indraprasta PGRI{" "}
-                <span className="text-zinc-400 ">(2021-2025)</span>
-              </p>
-              <p className="text-zinc-400 text-sm">Computer Science</p>
+              <p className="text-[#39EEFA] text-md">Languages</p>
+
+              <div className="text-white text-sm flex justify-between gap-3 items-center">
+                <p className="">Bahasa Indonesia</p>
+                <div className="flex flex-row items-center gap-1">
+                  <div className="w-30 h-3 rounded-2xl border border-zinc-400">
+                    <div className=" w-27 h-full rounded-2xl bg-[#39EEFA]"></div>
+                  </div>
+                  <p className="text-zinc-400 text-xs">90%</p>
+                </div>
+              </div>
+
+              <div className="text-white text-sm flex justify-between gap-3 items-center">
+                <p>English</p>
+                <div className="flex flex-row items-center gap-1">
+                  <div className="w-30 h-3 rounded-2xl border border-zinc-400">
+                    <div className=" w-23 h-full rounded-2xl bg-[#39EEFA]"></div>
+                  </div>
+                  <p className="text-zinc-400 text-xs">70%</p>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -1,3 +1,4 @@
+/* About */
 .about-content {
   background-image: url("../images/background/Background.png");
   background-size: cover;
@@ -44,7 +45,7 @@
   background-color: #39eefa;
 }
 
-/* button:hover {
-  transition: all 0.1s ease-in-out;
-  transform:;
+/* Bar */
+/* .language-bar-indonesia{
+  border: #39eefa;
 } */
