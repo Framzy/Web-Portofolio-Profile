@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { RefObject } from "react";
+import AboutTop from "../about/AboutTop";
 
 type Props = {
   sectionRef: RefObject<HTMLDivElement | null>;
@@ -9,60 +9,86 @@ export default function About({ sectionRef }: Props) {
   return (
     <>
       <section ref={sectionRef} className="about-content min-h-screen">
-        <div className="flex flex-col w-fit mx-auto box-border p-4">
-          <div className="flex flex-row justify-center font-manrope font-bold text-6xl box-border">
-            <p className="text-[#39EEFA]">
-              FRONT-END <span className="text-white">WEB DEVELOPER</span>
-            </p>
-          </div>
-          <p className="text-white font-manrope text-sm">BASED IN JAKARTA</p>
-        </div>
-
-        <div className="flex flex-col w-4/6 mx-auto box-border">
-          <div className="w-full mx-auto justify-end">
-            <p className="aboutMe-line text-neutral-300 font-thin font-poppins text-end text-[10px] ">
-              ///////////////// About_Me
-            </p>
-          </div>
-
-          <div className="flex flex-row justify-center gap-10 box-border">
-            <div className="w-90 mx-auto ">
+        <AboutTop />
+        <div className="grid grid-cols-2 w-4/6 p-10 mx-auto box-border gap-10">
+          <div className="flex flex-row gap-4" id="1">
+            <div className="w-7">
               <img
                 className="w-full h-auto"
-                src="/images/profile/Profile_Framzy.png"
-                alt="profile image"
+                src="/images/icon/education_icon.png"
+                alt=""
               />
             </div>
-
-            <div className="flex flex-col w-3/7 mx-auto pt-5">
-              <p className="aboutMe-name-line text-neutral-400 flex flex-col font-manrope text-3xl">
-                HELLO
-                <span className="text-white">I’M FARDEN RAMZY MUHARRAM</span>
+            <div className="flex flex-col font-manrope h-fit gap-1">
+              <p className="text-[#39EEFA] text-md">Education</p>
+              <p className="text-white text-sm">
+                University Indraprasta PGRI{" "}
+                <span className="text-zinc-400 ">(2021-2025)</span>
               </p>
-              <p className="pt-10 text-white text-justify">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-                porro quod quis voluptate. Sequi, laudantium cumque. Cumque
-                exercitationem aspernatur labore minima! Nisi reprehenderit at
-                repellendus quos deleniti explicabo reiciendis repudiandae?
-              </p>
+              <p className="text-zinc-400 text-sm">Computer Science</p>
+            </div>
+          </div>
 
-              <div className="flex flex-row justify-start gap-5 mt-5">
-                <button
-                  type="button"
-                  className="bg-[#39EEFA] text-sm font-manrope font-bold py-2 px-8 rounded cursor-pointer
-                transition-all duration-300 ease-in-out hover:bg-[#0A090F] hover:text-[#39EEFA] "
-                >
-                  Contact me
-                </button>
-                <button
-                  type="button"
-                  className="bg-[#0A090F] text-white flex flex-row items-center gap-1 h-fit  border border-white py-2 px-5 rounded box-border cursor-pointer 
-                transition-all duration-300 ease-in-out hover:transform hover:-skew-x-8"
-                >
-                  <p className="text-sm font-manrope font-bold">See projects</p>
-                  <FontAwesomeIcon icon={["fas", "arrow-right"]} />
-                </button>
-              </div>
+          <div className="flex flex-row gap-4" id="2">
+            <div className="w-7">
+              <img
+                className="w-full h-auto"
+                src="/images/icon/experience_icon.png"
+                alt=""
+              />
+            </div>
+            <div className="flex flex-col font-manrope h-fit gap-1">
+              <p className="text-[#39EEFA] text-md">Experience & Certificate</p>
+              <ul className="list-disc list-outside space-y-1 pl-4">
+                <li className="text-white text-sm">
+                  Internship{" "}
+                  <span className="text-zinc-400">
+                    (2024) | SMK 28 OKTOBER.II
+                  </span>
+                </li>
+                <li className="text-white text-sm">
+                  TOEFL EPT{" "}
+                  <span className="text-zinc-400">
+                    (2025) | Daily Bahasa Inggris - 557
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-row gap-4" id="3">
+            <div className="w-7">
+              <img
+                className="w-full h-auto"
+                src="/images/icon/languages_icon.png"
+                alt=""
+              />
+            </div>
+            <div className="flex flex-col font-manrope h-fit gap-1">
+              <p className="text-[#39EEFA] text-md">Education</p>
+              <p className="text-white text-sm">
+                University Indraprasta PGRI{" "}
+                <span className="text-zinc-400 ">(2021-2025)</span>
+              </p>
+              <p className="text-zinc-400 text-sm">Computer Science</p>
+            </div>
+          </div>
+
+          <div className="flex flex-row gap-4" id="4">
+            <div className="w-7">
+              <img
+                className="w-full h-auto"
+                src="/images/icon/hobbies_icon.png"
+                alt=""
+              />
+            </div>
+            <div className="flex flex-col font-manrope h-fit gap-1">
+              <p className="text-[#39EEFA] text-md">Education</p>
+              <p className="text-white text-sm">
+                University Indraprasta PGRI{" "}
+                <span className="text-zinc-400 ">(2021-2025)</span>
+              </p>
+              <p className="text-zinc-400 text-sm">Computer Science</p>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 .about-content {
-  background-image: url("../images/background/BG.png");
+  background-image: url("../images/background/Background.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 
 .aboutMe-line {
