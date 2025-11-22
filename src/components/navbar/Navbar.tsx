@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Section } from "../../types/sections";
+import DownloadCvButton from "../button/DownloadCvButton";
 
 type Props = {
   goTo: (section: Section) => void;
@@ -27,12 +28,10 @@ export default function Navbar({ goTo }: Props) {
         </li>
       </ul>
 
-      <button
-        type="button"
-        className="bg-white text-[#0A090F] font-medium text-sm h-11 w-60 mr-2 rounded hover:bg-[#39EEFA] cursor-pointer"
-      >
-        DOWNLOAD CV
-      </button>
+      <DownloadCvButton
+        path="/CV_Farden_Ramzy_Muharram.pdf"
+        filename="CV_Farden_Ramzy_Muharram.pdf"
+      />
     </nav>
   );
 }
