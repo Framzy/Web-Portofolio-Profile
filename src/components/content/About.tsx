@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { RefObject } from "react";
 
 type Props = {
@@ -25,7 +26,7 @@ export default function About({ sectionRef }: Props) {
           </div>
 
           <div className=" flex flex-row justify-center gap-10 box-border">
-            <div className="w-80 mx-auto">
+            <div className="w-80 mx-auto hover:scale-105">
               <img
                 className="w-full h-auto"
                 src="/images/profile/Profile_Framzy.png"
@@ -46,11 +47,12 @@ export default function About({ sectionRef }: Props) {
               </p>
 
               <div className="flex flex-row justify-start gap-5 mt-5">
-                <button className="bg-[#39EEFA] text-sm font-manrope font-bold py-2 px-8 rounded cursor-pointer">
+                <button className="bg-[#39EEFA] text-sm font-manrope font-bold py-2 px-8 rounded cursor-pointer transition-all duration-300 ease-in-out hover:bg-white hover:transform hover:scale-105">
                   Contact me
                 </button>
-                <button className="bg-[#0A090F] text-white text-sm font-manrope font-medium border border-white py-2 px-7 rounded cursor-pointer">
-                  See projects &#8594;
+                <button className="bg-[#0A090F] text-white flex flex-row items-center gap-1 h-fit text-sm font-manrope font-medium border border-white py-2 px-5 rounded box-border cursor-pointer transition-all duration-300 ease-in-out hover:transform hover:-skew-x-8">
+                  <p className="">See projects</p>
+                  <FontAwesomeIcon icon={["fas", "arrow-right"]} />
                 </button>
               </div>
             </div>
