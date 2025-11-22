@@ -16,7 +16,7 @@ export default function About({ sectionRef }: Props) {
               <img
                 className="w-full h-auto"
                 src="/images/icon/education_icon.png"
-                alt=""
+                alt="education icon"
               />
             </div>
             <div className="flex flex-col font-manrope h-fit gap-1">
@@ -34,7 +34,7 @@ export default function About({ sectionRef }: Props) {
               <img
                 className="w-full h-auto"
                 src="/images/icon/experience_icon.png"
-                alt=""
+                alt="experience icon"
               />
             </div>
             <div className="flex flex-col font-manrope h-fit gap-1">
@@ -56,12 +56,12 @@ export default function About({ sectionRef }: Props) {
             </div>
           </div>
 
-          <div className="flex flex-row gap-4" id="3">
+          <div className="flex flex-row flex-wrap gap-4" id="3">
             <div className="w-7">
               <img
                 className="w-full h-auto"
                 src="/images/icon/languages_icon.png"
-                alt=""
+                alt="languages icon"
               />
             </div>
             <div className="flex flex-col font-manrope h-fit gap-1">
@@ -94,16 +94,73 @@ export default function About({ sectionRef }: Props) {
               <img
                 className="w-full h-auto"
                 src="/images/icon/hobbies_icon.png"
-                alt=""
+                alt="hobbies icon"
               />
             </div>
-            <div className="flex flex-col font-manrope h-fit gap-1">
-              <p className="text-[#39EEFA] text-md">Education</p>
-              <p className="text-white text-sm">
-                University Indraprasta PGRI{" "}
-                <span className="text-zinc-400 ">(2021-2025)</span>
-              </p>
-              <p className="text-zinc-400 text-sm">Computer Science</p>
+            <div className="flex flex-col font-manrope font-bold h-fit gap-2">
+              <p className="text-[#39EEFA] text-md">Hobbies & Interest</p>
+              <div className="flex flex-row flex-wrap items-center justify-center gap-4">
+                <div className="flex flex-col items-center gap-1">
+                  <div className="h-6">
+                    <img
+                      className="w-full h-auto"
+                      src="/images/icon/Coding.png"
+                      alt="coding icon"
+                    />
+                  </div>
+                  <p className="text-zinc-500 text-xs">Programming</p>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="h-6">
+                    <img
+                      className="w-full h-auto"
+                      src="/images/icon/Game.png"
+                      alt="game icon"
+                    />
+                  </div>
+                  <p className="text-zinc-500 text-xs">Game</p>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="h-6">
+                    <img
+                      className="w-full h-auto"
+                      src="/images/icon/Music.png"
+                      alt="music icon"
+                    />
+                  </div>
+                  <p className="text-zinc-500 text-xs">Music</p>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="h-6">
+                    <img
+                      className="w-full h-auto"
+                      src="/images/icon/Movie.png"
+                      alt="movie icon"
+                    />
+                  </div>
+                  <p className="text-zinc-500 text-xs">Movie</p>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="h-6">
+                    <img
+                      className="w-full h-auto"
+                      src="/images/icon/Football.png"
+                      alt="football icon"
+                    />
+                  </div>
+                  <p className="text-zinc-500 text-xs">Football</p>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="w-6">
+                    <img
+                      className="w-full h-auto"
+                      src="/images/icon/Travel.png"
+                      alt="travel icon"
+                    />
+                  </div>
+                  <p className="text-zinc-500  text-xs">Travel</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
