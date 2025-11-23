@@ -3,10 +3,10 @@ export default function AboutBottom() {
     <>
       <div className="grid grid-cols-1 w-4/6 p-10 mx-auto box-border gap-10 sm:grid-cols-2 ">
         <div className="flex flex-row gap-4" id="1">
-          <div className="h-6">
+          <div className="w-8">
             <img
-              className="w-auto h-full"
-              src="/images/icon/education_icon.png"
+              className="w-full h-auto"
+              src="/images/icon/education_icon.webp"
               alt="education icon"
             />
           </div>
@@ -21,10 +21,10 @@ export default function AboutBottom() {
         </div>
 
         <div className="flex flex-row gap-4" id="2">
-          <div className="h-6">
+          <div className="w-8">
             <img
-              className="w-auto h-full"
-              src="/images/icon/experience_icon.png"
+              className="w-full h-auto"
+              src="/images/icon/experience_icon.webp"
               alt="experience icon"
             />
           </div>
@@ -48,10 +48,10 @@ export default function AboutBottom() {
         </div>
 
         <div className="flex flex-row flex-wrap gap-4" id="3">
-          <div className="h-6">
+          <div className="w-8">
             <img
-              className="w-auto h-full"
-              src="/images/icon/languages_icon.png"
+              className="w-full h-auto"
+              src="/images/icon/languages_icon.webp"
               alt="languages icon"
             />
           </div>
@@ -81,10 +81,10 @@ export default function AboutBottom() {
         </div>
 
         <div className="flex flex-row gap-4" id="4">
-          <div className="h-6">
+          <div className="w-8">
             <img
-              className="w-auto h-full"
-              src="/images/icon/hobbies_icon.png"
+              className="w-full h-auto"
+              src="/images/icon/hobbies_icon.webp"
               alt="hobbies icon"
             />
           </div>
@@ -95,7 +95,7 @@ export default function AboutBottom() {
                 <div className="h-5">
                   <img
                     className="w-auto h-full"
-                    src="/images/icon/Coding.png"
+                    src="/images/icon/Coding.webp"
                     alt="coding icon"
                   />
                 </div>
@@ -105,7 +105,7 @@ export default function AboutBottom() {
                 <div className="h-5">
                   <img
                     className="w-auto h-full"
-                    src="/images/icon/Game.png"
+                    src="/images/icon/Game.webp"
                     alt="game icon"
                   />
                 </div>
@@ -115,7 +115,7 @@ export default function AboutBottom() {
                 <div className="h-5">
                   <img
                     className="w-auto h-full"
-                    src="/images/icon/Music.png"
+                    src="/images/icon/Music.webp"
                     alt="music icon"
                   />
                 </div>
@@ -125,7 +125,7 @@ export default function AboutBottom() {
                 <div className="h-5">
                   <img
                     className="w-auto h-full"
-                    src="/images/icon/Movie.png"
+                    src="/images/icon/Movie.webp"
                     alt="movie icon"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function AboutBottom() {
                 <div className="h-5">
                   <img
                     className="w-auto h-full"
-                    src="/images/icon/Football.png"
+                    src="/images/icon/Football.webp"
                     alt="football icon"
                   />
                 </div>
@@ -145,7 +145,7 @@ export default function AboutBottom() {
                 <div className="h-5">
                   <img
                     className="w-auto h-full"
-                    src="/images/icon/Travel.png"
+                    src="/images/icon/Travel.webp"
                     alt="travel icon"
                   />
                 </div>

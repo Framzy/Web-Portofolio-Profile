@@ -28,10 +28,7 @@ export default function Navbar({ goTo }: Props) {
         </li>
       </ul>
 
-      <DownloadCvButton
-        path="/CV_Farden_Ramzy_Muharram.pdf"
-        filename="CV_Farden_Ramzy_Muharram.pdf"
-      />
+      <DownloadCvButton />
     </nav>
   );
 }
