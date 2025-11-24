@@ -1,3 +1,3 @@
 # Framzy Profile
 
-Created by vite + react + typescript
+This web created by vite + react + typescript
