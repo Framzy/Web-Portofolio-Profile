@@ -23,7 +23,7 @@ export default function AboutTop() {
           <div className="w-90 mx-auto ">
             <img
               className="w-full h-auto"
-              src="/images/profile/Profile_Framzy.png"
+              src="/images/profile/Profile_Framzy.webp"
               alt="profile image"
             />
           </div>

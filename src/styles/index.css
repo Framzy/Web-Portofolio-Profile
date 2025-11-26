@@ -1,12 +1,43 @@
+/* ======================= */
+/*  1. IMPORT TAILWIND     */
+/* ======================= */
 @import "tailwindcss";
 
+/* ======================= */
+/*  2. REGISTER LOCAL FONTS */
+/* ======================= */
+@font-face {
+  font-family: "Vollkorn";
+  src: url("/fonts/Vollkorn-Regular.woff2") format("woff2"),
+    url("/fonts/Vollkorn-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Regular.woff2") format("woff2"),
+    url("/fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ======================================== */
+/*  3. DEFINE TAILWIND THEME WITH VARIABLES */
+/* ======================================== */
 @theme {
   --font-vollkorn: "Vollkorn", serif;
   --font-manrope: "Manrope", sans-serif;
-  --font-poppins: "Poppins", sans-serif;
+
   --text-primary-color: #39eefa;
 }
 
+/* ======================= */
+/* 4. GLOBAL BASE STYLE    */
+/* ======================= */
 body {
   background-color: #0a090f;
+  font-family: var(--font-manrope);
 }
