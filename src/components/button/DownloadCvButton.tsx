@@ -1,7 +1,11 @@
 import { useState } from "react";
 
-// DownloadCvButton.tsx
-export default function DownloadCvButton() {
+type Props = {
+  href: string;
+  fileName: string;
+};
+
+export default function DownloadCvButton({ href, fileName }: Props) {
   const [confirm, setConfirm] = useState(false);
 
   return (
@@ -15,19 +19,19 @@ export default function DownloadCvButton() {
 
       {confirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-          <div className="bg-[#0A0A0A] p-6 rounded text-white">
-            <p className="mb-4 text-center">Download CV sekarang?</p>
+          <div className="bg-[#0A0A0A] font-manrope p-6 rounded text-white border border-[#39EEFA] md:p-10 transition-all ease-in-out duration-300">
+            <p className="mb-4 text-center md:mb-6">Download CV sekarang?</p>
             <div className="flex gap-3">
               <button
-                className="px-3 py-1 bg-zinc-700 rounded cursor-pointer"
+                className="px-3 py-1 bg-zinc-700 rounded cursor-pointer md:px-5 md:py-2"
                 onClick={() => setConfirm(false)}
               >
                 Cancel
               </button>
 
               <a
-                href="/cv_file/cv.pdf"
-                download="Framzy_CV.pdf"
+                href={href}
+                download={fileName}
                 className="px-3 py-1 bg-[#39EEFA] text-black rounded cursor-pointer inline-flex items-center justify-center"
                 onClick={() => setConfirm(false)}
               >

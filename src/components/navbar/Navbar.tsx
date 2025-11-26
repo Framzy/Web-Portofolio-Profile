@@ -28,7 +28,7 @@ export default function Navbar({ goTo }: Props) {
         </li>
       </ul>
 
-      <DownloadCvButton />
+      <DownloadCvButton href="/cv_file/cv.pdf" fileName="Framzy_CV.pdf" />
     </nav>
   );
 }
