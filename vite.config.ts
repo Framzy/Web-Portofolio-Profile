@@ -4,4 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  assetsInclude: ["**/*.pdf"], // ← Tambahkan ini
+  publicDir: "public", // ← Pastikan ini ada
 });
