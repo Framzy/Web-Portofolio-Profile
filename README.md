@@ -2,8 +2,14 @@
 
 This website created by vite + react + typescript
 
-This website contain 
+This website contain :
 - About
+  
 - Skills
 - Projects
-- Connect 
+  
+- Connect
+   - LinkedIn
+   - Instagram
+   - Github
+     
