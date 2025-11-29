@@ -12,17 +12,26 @@ export default function Navbar({ goTo }: Props) {
       <h1 className="text-white font-bold font-vollkorn ml-20">FRAMZY.</h1>
 
       <ul className=" text-white flex flex-row gap-8 font-manrope text-sm mr-20">
-        <li className="text-[#39EEFA]">
-          <button onClick={() => goTo("about")}>ABOUT</button>
+        <li>
+          <button
+            className="navbar-navItem text-[#39EEFA]"
+            onClick={() => goTo("about")}
+          >
+            ABOUT
+          </button>
         </li>
         <li>
-          <button onClick={() => goTo("skill")}>SKILLS</button>
+          <button className="navbar-navItem" onClick={() => goTo("skill")}>
+            SKILLS
+          </button>
         </li>
         <li>
-          <button onClick={() => goTo("project")}>PROJECTS</button>
+          <button className="navbar-navItem" onClick={() => goTo("project")}>
+            PROJECTS
+          </button>
         </li>
         <li>
-          <button>
+          <button className="navbar-navItem">
             CONNECT <FontAwesomeIcon icon={["fas", "caret-down"]} />
           </button>
         </li>

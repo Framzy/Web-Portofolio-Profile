@@ -1,3 +1,13 @@
+/* Navbar */
+
+.navbar-navItem {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-navItem:hover {
+  color: #39eefa;
+}
+
 /* About */
 .about-content {
   background-image: url("../images/background/Background.webp");
