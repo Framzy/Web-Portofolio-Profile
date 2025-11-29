@@ -10,7 +10,7 @@
 
 /* About */
 .about-content {
-  background-image: url("../images/background/Background.webp");
+  background-image: url("/images/background/Background.webp");
   background-size: cover;
   background-position: bottom;
 }

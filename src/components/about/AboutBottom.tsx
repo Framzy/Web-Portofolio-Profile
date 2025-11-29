@@ -8,6 +8,7 @@ export default function AboutBottom() {
               className="w-full h-auto"
               src="/images/icon/education_icon.webp"
               alt="education icon"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col font-manrope h-fit gap-1">
@@ -26,6 +27,7 @@ export default function AboutBottom() {
               className="w-full h-auto"
               src="/images/icon/experience_icon.webp"
               alt="experience icon"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col font-manrope h-fit gap-1">
@@ -53,6 +55,7 @@ export default function AboutBottom() {
               className="w-full h-auto"
               src="/images/icon/languages_icon.webp"
               alt="languages icon"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col font-manrope h-fit gap-1">
@@ -86,6 +89,7 @@ export default function AboutBottom() {
               className="w-full h-auto"
               src="/images/icon/hobbies_icon.webp"
               alt="hobbies icon"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col font-manrope h-fit gap-2">
@@ -97,6 +101,7 @@ export default function AboutBottom() {
                     className="w-auto h-full"
                     src="/images/icon/Coding.webp"
                     alt="coding icon"
+                    loading="lazy"
                   />
                 </div>
                 <p className="text-zinc-500 text-xs">Programming</p>
@@ -107,6 +112,7 @@ export default function AboutBottom() {
                     className="w-auto h-full"
                     src="/images/icon/Game.webp"
                     alt="game icon"
+                    loading="lazy"
                   />
                 </div>
                 <p className="text-zinc-500 text-xs">Game</p>
@@ -117,6 +123,7 @@ export default function AboutBottom() {
                     className="w-auto h-full"
                     src="/images/icon/Music.webp"
                     alt="music icon"
+                    loading="lazy"
                   />
                 </div>
                 <p className="text-zinc-500 text-xs">Music</p>
@@ -127,6 +134,7 @@ export default function AboutBottom() {
                     className="w-auto h-full"
                     src="/images/icon/Movie.webp"
                     alt="movie icon"
+                    loading="lazy"
                   />
                 </div>
                 <p className="text-zinc-500 text-xs">Movie</p>
@@ -137,6 +145,7 @@ export default function AboutBottom() {
                     className="w-auto h-full"
                     src="/images/icon/Football.webp"
                     alt="football icon"
+                    loading="lazy"
                   />
                 </div>
                 <p className="text-zinc-500 text-xs">Football</p>
@@ -147,6 +156,7 @@ export default function AboutBottom() {
                     className="w-auto h-full"
                     src="/images/icon/Travel.webp"
                     alt="travel icon"
+                    loading="lazy"
                   />
                 </div>
                 <p className="text-zinc-500  text-xs">Travel</p>

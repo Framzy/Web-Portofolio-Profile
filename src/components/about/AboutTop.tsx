@@ -25,6 +25,7 @@ export default function AboutTop() {
               className="w-full h-auto"
               src="/images/profile/Profile_Framzy.webp"
               alt="profile image"
+              loading="lazy"
             />
           </div>
 
