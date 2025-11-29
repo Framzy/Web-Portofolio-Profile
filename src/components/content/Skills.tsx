@@ -7,11 +7,15 @@ type Props = {
 export default function Skills({ sectionRef }: Props) {
   return (
     <>
-      <section
-        ref={sectionRef}
-        className="h-screen mt-10 border-t border-[#8A8A8A]"
-      >
-        <h1 className="text-3xl text-center font-bold text-white">Skills</h1>
+      <section ref={sectionRef} className="h-screen mt-10">
+        <div className="skills-title w-8/10 mx-auto flex flex-row justify-between items-center py-5">
+          <h1 className="text-3xl text-center font-bold text-[#39EEFA]">
+            Skills
+          </h1>
+          <p className=" text-neutral-300 font-thin font-poppins text-[10px] ">
+            ///////////////// MY_SKILLS
+          </p>
+        </div>
       </section>
     </>
   );

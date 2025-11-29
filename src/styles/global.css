@@ -59,3 +59,30 @@
 /* .language-bar-indonesia{
   border: #39eefa;
 } */
+
+/* SKILLS */
+
+.skills-title {
+  position: relative;
+}
+
+.skills-title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 63%;
+  bottom: 15px;
+  right: 37%;
+  background-color: #a8a8a8;
+}
+.skills-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 37%;
+  bottom: 14px;
+  right: 0;
+  background-color: #ffffff;
+}
