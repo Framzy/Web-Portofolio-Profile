@@ -4,7 +4,7 @@ import Skills from "./content/Skills";
 import Projects from "./content/Projects";
 import { useOutletContext } from "react-router-dom";
 import type { OutletContextValue } from "../types/sections";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaArrowUp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 export default function Content() {
@@ -53,7 +53,7 @@ export default function Content() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <FontAwesomeIcon icon={["fas", "arrow-up"]} />
+            <FaArrowUp size={16} />
           </button>
         </div>
       )}
