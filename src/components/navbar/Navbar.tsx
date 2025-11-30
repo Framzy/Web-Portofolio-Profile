@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { RxCaretDown } from "react-icons/rx";
 import type { Section } from "../../types/sections";
 import DownloadCvButton from "../button/DownloadCvButton";
 
@@ -31,8 +31,8 @@ export default function Navbar({ goTo }: Props) {
           </button>
         </li>
         <li>
-          <button className="navbar-navItem">
-            CONNECT <FontAwesomeIcon icon={["fas", "caret-down"]} />
+          <button className="navbar-navItem flex items-center">
+            CONNECT <RxCaretDown size={16} />
           </button>
         </li>
       </ul>

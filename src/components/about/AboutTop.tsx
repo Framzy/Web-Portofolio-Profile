@@ -1,12 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function AboutTop() {
   return (
     <>
       <div className="flex flex-col w-fit mx-auto box-border p-4">
-        <div className="flex flex-row justify-center font-manrope font-bold text-6xl box-border">
+        <div className="flex items-center justify-center font-manrope font-bold text-6xl box-border bg-amber-50">
           <p className="text-[#39EEFA]">
-            FRONT-END <span className="text-white">WEB DEVELOPER</span>
+            FRONT-END <span className="text-white ">WEB DEVELOPER</span>
           </p>
         </div>
         <p className="text-white font-manrope text-sm">BASED IN JAKARTA</p>
@@ -55,7 +55,7 @@ export default function AboutTop() {
                 transition-all duration-300 ease-in-out hover:transform hover:-skew-x-8"
               >
                 <p className="text-sm font-manrope font-bold">See projects</p>
-                <FontAwesomeIcon icon={["fas", "arrow-right"]} />
+                <FaArrowRight size={16} />
               </button>
             </div>
           </div>
