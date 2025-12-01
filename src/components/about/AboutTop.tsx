@@ -3,13 +3,15 @@ import { FaArrowRight } from "react-icons/fa";
 export default function AboutTop() {
   return (
     <>
-      <div className="flex flex-col w-fit mx-auto box-border p-4">
-        <div className="flex items-center justify-center font-manrope font-bold text-6xl box-border bg-amber-50">
-          <p className="text-[#39EEFA]">
-            FRONT-END <span className="text-white ">WEB DEVELOPER</span>
+      <div className="flex flex-col w-4/5 lg:w-fit mx-auto box-border p-4">
+        <div className="flex items-center justify-center font-manrope font-bold text-6xl box-border">
+          <p className="text-[#39EEFA]  md:text-center">
+            FRONT-END <span className="text-white">WEB DEVELOPER</span>
           </p>
         </div>
-        <p className="text-white font-manrope text-sm">BASED IN JAKARTA</p>
+        <p className="text-white font-manrope text-sm text-start md:text-center lg:text-start">
+          BASED IN JAKARTA
+        </p>
       </div>
 
       <div className="flex flex-col w-4/6 mx-auto box-border">
