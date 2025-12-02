@@ -11,7 +11,7 @@ export default function Navbar({ goTo }: Props) {
     <nav className="bg-[#0A090F] flex justify-between items-center h-16 border-b border-[#8A8A8A]">
       <h1 className="text-white font-bold font-vollkorn ml-20">FRAMZY.</h1>
 
-      <ul className=" text-white flex flex-row gap-8 font-manrope text-sm mr-20">
+      <ul className=" text-white flex flex-row gap-8 font-manrope text-sm">
         <li>
           <button
             className="navbar-navItem text-[#39EEFA]"

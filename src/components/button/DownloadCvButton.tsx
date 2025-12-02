@@ -6,49 +6,43 @@ type Props = {
 };
 
 export default function DownloadCvButton({ href, fileName }: Props) {
-  const [confirm, setConfirm] = useState(false); // kontrol mount
-  const [isVisible, setIsVisible] = useState(false); // kontrol kelas animasi
+  const [confirm, setConfirm] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const open = () => {
     setConfirm(true);
-    // jalankan setIsVisible pada tick berikutnya supaya transition 'enter' bekerja
+
     requestAnimationFrame(() => setIsVisible(true));
   };
 
   const close = () => {
-    // mulai animasi keluar
     setIsVisible(false);
-    // setelah durasi animasi, unmount
-    setTimeout(() => setConfirm(false), 300); // pastikan sama dengan duration kelas Tailwind
+    setTimeout(() => setConfirm(false), 300);
   };
 
   return (
     <>
       <button
         onClick={open}
-        className="bg-white text-black font-bold font-manrope h-11 w-60 rounded hover:bg-[#39EEFA] cursor-pointer transition-all duration-300 ease-in-out
-          text-[11px] md:text-sm
+        className="bg-white text-black font-bold font-manrope h-11 w-40 md:w-50 lg:w-57 mr-2 rounded hover:bg-[#39EEFA] cursor-pointer transition-all duration-300 ease-in-out
+          text-sm
         "
       >
         DOWNLOAD CV
       </button>
 
       {confirm && (
-        // Container overlay: kita juga animasikan overlay (fade)
         <div
           className={`fixed inset-0 z-50 flex items-center justify-center
             transition-opacity duration-300
             ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-          // pointer-events-none saat hidden agar klik di belakang tidak tertangkap
         >
-          {/* Backdrop */}
           <div
             className={`absolute inset-0 bg-black/40 transition-opacity duration-300
               ${isVisible ? "opacity-100" : "opacity-0"}`}
-            onClick={close} // klik backdrop juga menutup
+            onClick={close}
           />
 
-          {/* Modal box */}
           <div
             className={`relative z-10 bg-[#0A0A0A] font-manrope p-6 rounded text-white border border-[#39EEFA]
               transform transition-all duration-300 ease-out
@@ -57,7 +51,6 @@ export default function DownloadCvButton({ href, fileName }: Props) {
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-4 scale-95"
               }`}
-            // aria attributes
             role="dialog"
             aria-modal="true"
             aria-label="Confirm download"
