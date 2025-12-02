@@ -1,7 +1,7 @@
-// src/components/Content.tsx
 import About from "./content/About";
 import Skills from "./content/Skills";
 import Projects from "./content/Projects";
+import Footer from "./content/Footer";
 import { useOutletContext } from "react-router-dom";
 import type { OutletContextValue } from "../types/sections";
 import { FaArrowUp } from "react-icons/fa";
@@ -42,6 +42,7 @@ export default function Content() {
       <About sectionRef={refs.about} />
       <Skills sectionRef={refs.skill} />
       <Projects sectionRef={refs.project} />
+      <Footer />
 
       {showScrollTop && (
         <div className="scroll-top bg-[#39EEFA] h-10 w-10 rounded-full fixed bottom-10 right-10 transition-all duration-300 ease-in-out hover:bg-white">
