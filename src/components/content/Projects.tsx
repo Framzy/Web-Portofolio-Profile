@@ -11,8 +11,8 @@ export default function Projects({ sectionRef }: Props) {
           <h1 className="text-3xl font-bold text-[#39EEFA]">
             MY <span className="text-white">PROJECTS</span>
           </h1>
-          <p className=" text-neutral-300 font-thin font-poppins text-[10px]">
-            ///////////////// MY_SKILLS
+          <p className=" text-white font-thin font-poppins text-[10px]">
+            ///////////////// MY_PROJECTS
           </p>
         </div>
       </section>
