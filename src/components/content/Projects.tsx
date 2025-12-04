@@ -52,7 +52,7 @@ export default function Projects({ sectionRef }: Props) {
   }, [swiperReady]);
 
   return (
-    <section ref={sectionRef} className="h-screen mt-10">
+    <section ref={sectionRef} className="h-screen my-10">
       <div className="skills-title w-8/10 mx-auto flex flex-row justify-between items-end py-5">
         <h1 className="text-3xl font-bold text-[#39EEFA]">
           MY <span className="text-white">PROJECTS</span>
@@ -79,15 +79,46 @@ export default function Projects({ sectionRef }: Props) {
             onSwiper={handleOnSwiper}
           >
             <SwiperSlide>
-              <div className="bg-red-500 h-60">
-                <h1>agafa</h1>
+              <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
+                <div className="item-1 flex flex-col gap-2 w-fit ">
+                  <p className="text-xs ">project_01</p>
+                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
+                  <h2 className="text-sm">Posyandu APP - Thesis</h2>
+                </div>
+                <div className="item-1 flex flex-col gap-2 w-fit ">
+                  <p className="text-xs ">project_02</p>
+                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
+                  <h2 className="text-sm">Kedai Takjil</h2>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-blue-500 h-40" />
+              <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
+                <div className="item-1 flex flex-col gap-2 w-fit ">
+                  <p className="text-xs ">project_03</p>
+                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
+                  <h2 className="text-sm">Posyandu APP - Thesis</h2>
+                </div>
+                <div className="item-1 flex flex-col gap-2 w-fit ">
+                  <p className="text-xs ">project_04</p>
+                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
+                  <h2 className="text-sm">Kedai Takjil</h2>
+                </div>
+              </div>{" "}
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-green-500 h-40" />
+              <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
+                <div className="item-1 flex flex-col gap-2 w-fit ">
+                  <p className="text-xs ">project_05</p>
+                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
+                  <h2 className="text-sm">Posyandu APP - Thesis</h2>
+                </div>
+                <div className="item-1 flex flex-col gap-2 w-fit ">
+                  <p className="text-xs ">project_06</p>
+                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
+                  <h2 className="text-sm">Kedai Takjil</h2>
+                </div>
+              </div>{" "}
             </SwiperSlide>
           </Swiper>
         </div>
