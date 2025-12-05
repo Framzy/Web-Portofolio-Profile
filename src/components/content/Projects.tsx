@@ -9,38 +9,60 @@ import "swiper/css/pagination";
 
 type Props = { sectionRef: RefObject<HTMLDivElement | null> };
 
+const PROJECTS = [
+  { id: "project_01", title: "Posyandu APP - Thesis" },
+  { id: "project_02", title: "Kedai Takjil" },
+  { id: "project_03", title: "Posyandu APP - Thesis" },
+  { id: "project_04", title: "Kedai Takjil" },
+  { id: "project_05", title: "Posyandu APP - Thesis" },
+  { id: "project_06", title: "Kedai Takjil" },
+];
+
+function chunk<T>(arr: T[], size = 2): T[][] {
+  const out: T[][] = [];
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+  return out;
+}
+
+// card kecil untuk tiap project (reuseable)
+function ProjectCard({ project }: { project: { id: string; title: string } }) {
+  return (
+    <div className="item-1 flex flex-col gap-2 w-fit ">
+      <p className="text-xs ">{project.id}</p>
+      <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl" />
+      <h2 className="text-sm">{project.title}</h2>
+    </div>
+  );
+}
+
 export default function Projects({ sectionRef }: Props) {
   const swiperRef = useRef<SwiperType | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
+  const slides = chunk(PROJECTS, 2);
 
-  // dipanggil saat Swiper siap
   function handleOnSwiper(sw: SwiperType) {
     swiperRef.current = sw;
-    setSwiperReady((v) => !v); // toggle supaya useEffect berjalan
+    setSwiperReady((v) => !v);
   }
 
-  // attach external pagination setelah Swiper dan DOM paginationRef ada
   useEffect(() => {
     const s = swiperRef.current;
     const el = paginationRef.current;
     if (!s || !el) return;
 
-    // setel parameter pagination ke element eksternal
     (s.params.pagination as any) = {
       ...(s.params.pagination as any),
       el,
       clickable: true,
     };
 
-    // inisialisasi / render / update pagination
     const pager = (s as any).pagination;
     if (pager) {
       pager.init();
       pager.render();
       pager.update();
     }
-    // optional: bersihkan saat unmount
     return () => {
       if ((s as any).pagination) {
         try {
@@ -48,7 +70,6 @@ export default function Projects({ sectionRef }: Props) {
         } catch {}
       }
     };
-    // depend on swiperRef change (via swiperReady toggle)
   }, [swiperReady]);
 
   return (
@@ -61,6 +82,7 @@ export default function Projects({ sectionRef }: Props) {
           ///////////////// MY_PROJECTS
         </p>
       </div>
+
       <div className="w-full flex flex-row items-center justify-center gap-5">
         <div className="left-slide-content">
           <button
@@ -71,6 +93,7 @@ export default function Projects({ sectionRef }: Props) {
             <FaArrowLeftLong size={20} className="text-white" />
           </button>
         </div>
+
         <div className="slide-content border border-[#898989] w-8/10 ">
           <Swiper
             modules={[Pagination]}
@@ -78,48 +101,15 @@ export default function Projects({ sectionRef }: Props) {
             spaceBetween={20}
             onSwiper={handleOnSwiper}
           >
-            <SwiperSlide>
-              <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
-                <div className="item-1 flex flex-col gap-2 w-fit ">
-                  <p className="text-xs ">project_01</p>
-                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
-                  <h2 className="text-sm">Posyandu APP - Thesis</h2>
+            {slides.map((pair, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
+                  {pair.map((p) => (
+                    <ProjectCard key={p.id} project={p} />
+                  ))}
                 </div>
-                <div className="item-1 flex flex-col gap-2 w-fit ">
-                  <p className="text-xs ">project_02</p>
-                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
-                  <h2 className="text-sm">Kedai Takjil</h2>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
-                <div className="item-1 flex flex-col gap-2 w-fit ">
-                  <p className="text-xs ">project_03</p>
-                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
-                  <h2 className="text-sm">Posyandu APP - Thesis</h2>
-                </div>
-                <div className="item-1 flex flex-col gap-2 w-fit ">
-                  <p className="text-xs ">project_04</p>
-                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
-                  <h2 className="text-sm">Kedai Takjil</h2>
-                </div>
-              </div>{" "}
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
-                <div className="item-1 flex flex-col gap-2 w-fit ">
-                  <p className="text-xs ">project_05</p>
-                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
-                  <h2 className="text-sm">Posyandu APP - Thesis</h2>
-                </div>
-                <div className="item-1 flex flex-col gap-2 w-fit ">
-                  <p className="text-xs ">project_06</p>
-                  <div className="img-item w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85 bg-amber-50 border border-white rounded-xl"></div>
-                  <h2 className="text-sm">Kedai Takjil</h2>
-                </div>
-              </div>{" "}
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 
@@ -133,6 +123,7 @@ export default function Projects({ sectionRef }: Props) {
           </button>
         </div>
       </div>
+
       <div
         ref={paginationRef}
         className="my-4 flex justify-center gap-2 custom-pagination"
