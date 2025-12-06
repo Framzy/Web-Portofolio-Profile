@@ -6,6 +6,11 @@ This website contain :
 - About
   
 - Skills
+   - Programming Language
+   - Database
+   - Operation System
+   - Cloud Computing 
+     
 - Projects
   
 - Connect
