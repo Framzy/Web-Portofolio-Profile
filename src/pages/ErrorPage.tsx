@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import Lottie from "lottie-react";
-import animation404 from "../../assets/lotties/404.json";
+import animation404 from "../assets/lotties/404.json";
 
 export default function ErrorPage() {
   return (
