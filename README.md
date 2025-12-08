@@ -12,6 +12,8 @@ This website contain :
    - Cloud Computing 
      
 - Projects
+   - Contact Management
+   - Kedai Takjil
   
 - Connect
    - LinkedIn
