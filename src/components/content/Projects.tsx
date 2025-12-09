@@ -20,7 +20,11 @@ const PROJECTS = [
     title: "Kedai Takjil",
     link: "https://kedai-takjil.vercel.app/",
   },
-  { id: "project_03", title: "Posyandu APP - Thesis" },
+  {
+    id: "project_03",
+    title: "Tic Tac Toe",
+    link: "https://tic-tac-toe.vercel.app/",
+  },
   { id: "project_04", title: "Kedai Takjil" },
   { id: "project_05", title: "Posyandu APP - Thesis" },
   { id: "project_06", title: "Kedai Takjil" },
