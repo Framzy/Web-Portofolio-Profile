@@ -3,20 +3,18 @@
 This website created by vite + react + typescript
 
 This website contain :
+
 - About
-  
 - Skills
-   - Programming Language
-   - Database
-   - Operation System
-   - Cloud Computing 
-     
+  - Programming Language
+  - Database
+  - Operation System
+  - Cloud Computing
 - Projects
-   - Contact Management
-   - Kedai Takjil
-  
+  - Contact Management
+  - Kedai Takjil
+  - Tic Tac Toe
 - Connect
-   - LinkedIn
-   - Instagram
-   - Github
-     
+  - LinkedIn
+  - Instagram
+  - Github
