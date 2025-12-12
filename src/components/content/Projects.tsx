@@ -25,9 +25,9 @@ const PROJECTS = [
     title: "Tic Tac Toe",
     link: "https://tic-tac-toe.vercel.app/",
   },
-  { id: "project_04", title: "Kedai Takjil" },
-  { id: "project_05", title: "Posyandu APP - Thesis" },
-  { id: "project_06", title: "Kedai Takjil" },
+  { id: "project_04", title: "Posyandu APP - Thesis" },
+  { id: "project_05", title: "Posyandu APP - Thesis", link: "#" },
+  { id: "project_06", title: "School Library App", link: "#" },
 ];
 
 function chunk<T>(arr: T[], size = 2): T[][] {
