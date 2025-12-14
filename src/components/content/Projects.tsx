@@ -23,7 +23,7 @@ const PROJECTS = [
   {
     id: "project_03",
     title: "Tic Tac Toe",
-    link: "https://tic-tac-toe.vercel.app/",
+    link: "https://framzy-react-tic-tac-toe.vercel.app/",
   },
   { id: "project_04", title: "Posyandu APP - Thesis" },
   { id: "project_05", title: "Posyandu APP - Thesis", link: "#" },
