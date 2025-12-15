@@ -14,15 +14,9 @@ export default function AboutTop() {
         </p>
       </div>
 
-      <div className="flex flex-col w-4/6 mx-auto box-border">
-        <div className="w-full mx-auto justify-end">
-          <p className="aboutMe-line text-neutral-300 font-thin font-poppins text-end text-[10px] ">
-            ///////////////// About_Me
-          </p>
-        </div>
-
-        <div className="flex flex-row justify-center gap-10 box-border">
-          <div className="w-90 mx-auto ">
+      <div className="flex flex-col w-5/6 xl:w-4/6 mx-auto box-border ">
+        <div className="flex flex-col md:flex-row justify-center gap-10 box-border">
+          <div className="w-fit max-w-90 mx-auto">
             <img
               className="w-full h-auto"
               src="/images/profile/Profile_Framzy.webp"
@@ -32,7 +26,10 @@ export default function AboutTop() {
             />
           </div>
 
-          <div className="flex flex-col w-3/7 mx-auto pt-5">
+          <div className="flex flex-col w-4/5 md:w-3/7 mx-auto pt-5 ">
+            <p className="aboutMe-line text-neutral-300 font-thin font-poppins text-end text-[10px] ">
+              ///////////////// About_Me
+            </p>
             <p className="aboutMe-name-line text-neutral-400 flex flex-col font-manrope text-3xl">
               HELLO
               <span className="text-white">I’M FARDEN RAMZY MUHARRAM</span>
@@ -44,20 +41,21 @@ export default function AboutTop() {
               repellendus quos deleniti explicabo reiciendis repudiandae?
             </p>
 
-            <div className="flex flex-row justify-start gap-5 mt-5">
+            <div className="flex flex-row justify-start gap-5 mt-5 text-xs lg:text-sm">
               <button
                 type="button"
-                className="bg-[#39EEFA] text-sm font-manrope font-bold py-2 px-8 rounded cursor-pointer
+                className="bg-[#39EEFA]  font-manrope font-bold py-2 px-4 lg:px-6  rounded cursor-pointer
                 transition-all duration-300 ease-in-out hover:bg-[#0A090F] hover:text-[#39EEFA] "
               >
                 Contact me
               </button>
               <button
                 type="button"
-                className="bg-[#0A090F] text-white flex flex-row items-center gap-1 h-fit  border border-white py-2 px-5 rounded box-border cursor-pointer 
+                className="bg-[#0A090F] text-white flex flex-row items-center gap-1 h-fit border border-white py-2 px-2 lg:px-4
+                 rounded box-border cursor-pointer 
                 transition-all duration-300 ease-in-out hover:transform hover:-skew-x-8"
               >
-                <p className="text-sm font-manrope font-bold">See projects</p>
+                <p className="font-manrope font-bold w-full">See projects</p>
                 <FaArrowRight size={16} />
               </button>
             </div>

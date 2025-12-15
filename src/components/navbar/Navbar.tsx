@@ -8,7 +8,7 @@ type Props = {
 
 export default function Navbar({ goTo }: Props) {
   return (
-    <nav className="bg-[#0A090F] flex justify-between items-center h-16 border-b border-[#8A8A8A]">
+    <nav className="bg-[#0A090F] flex flex-wrap justify-between items-center h-16 border-b border-[#8A8A8A]">
       <h1 className="text-white font-bold font-vollkorn ml-20">FRAMZY.</h1>
 
       <ul className=" text-white flex flex-row gap-12 font-manrope text-sm">
