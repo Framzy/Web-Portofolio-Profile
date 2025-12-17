@@ -14,6 +14,7 @@ This website contain :
   - Contact Management
   - Kedai Takjil
   - Tic Tac Toe
+  - Valorant Prediction
 - Connect
   - LinkedIn
   - Instagram
