@@ -1,18 +1,20 @@
 export default function AboutBottom() {
   return (
     <>
-      <div className="grid grid-cols-1 w-4/6 p-10 mx-auto box-border gap-10 sm:grid-cols-2 ">
-        <div className="flex flex-row gap-4" id="1">
-          <div className="w-8">
-            <img
-              className="w-full h-auto"
-              src="/images/icon/education_icon.webp"
-              alt="education icon"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-col font-manrope h-fit gap-1">
+      <div className="grid grid-cols-1 w-5/6 lg:w-5/7 xl:w-5/8 p-10 mx-auto box-border gap-10 md:grid-cols-2 ">
+        <div className="flex flex-col gap-1" id="1">
+          <div className="flex flex-row gap-4 min-h-8 items-center">
+            <div className="w-5 lg:w-8">
+              <img
+                className="w-full h-auto"
+                src="/images/icon/education_icon.webp"
+                alt="education icon"
+                loading="lazy"
+              />
+            </div>
             <p className="text-[#39EEFA] text-md">Education</p>
+          </div>
+          <div className="flex flex-col font-manrope h-fit gap-1 ml-9 lg:ml-12">
             <p className="text-white text-sm">
               University Indraprasta PGRI{" "}
               <span className="text-zinc-400 ">(2021-2025)</span>
@@ -21,17 +23,19 @@ export default function AboutBottom() {
           </div>
         </div>
 
-        <div className="flex flex-row gap-4" id="2">
-          <div className="w-8">
-            <img
-              className="w-full h-auto"
-              src="/images/icon/experience_icon.webp"
-              alt="experience icon"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-col font-manrope h-fit gap-1">
+        <div className="flex flex-col gap-1" id="2">
+          <div className="flex flex-row gap-4 min-h-8 items-center">
+            <div className="w-5 lg:w-6">
+              <img
+                className="w-full h-auto"
+                src="/images/icon/experience_icon.webp"
+                alt="experience icon"
+                loading="lazy"
+              />
+            </div>
             <p className="text-[#39EEFA] text-md">Experience & Certificate</p>
+          </div>
+          <div className="flex flex-col font-manrope h-fit gap-1 ml-9 lg:ml-11">
             <ul className="list-disc list-outside space-y-1 pl-4">
               <li className="text-white text-sm">
                 Internship{" "}
@@ -49,20 +53,22 @@ export default function AboutBottom() {
           </div>
         </div>
 
-        <div className="flex flex-row flex-wrap gap-4" id="3">
-          <div className="w-8">
-            <img
-              className="w-full h-auto"
-              src="/images/icon/languages_icon.webp"
-              alt="languages icon"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-col font-manrope h-fit gap-1">
+        <div className="flex flex-col flex-wrap gap-1" id="3">
+          <div className="flex flex-row gap-4 min-h-8 items-center">
+            <div className="w-5 lg:w-7">
+              <img
+                className="w-full h-auto"
+                src="/images/icon/languages_icon.webp"
+                alt="languages icon"
+                loading="lazy"
+              />
+            </div>
             <p className="text-[#39EEFA] text-md">Languages</p>
+          </div>
 
+          <div className="flex flex-col font-manrope h-fit gap-1 ml-9 lg:ml-11">
             <div className="text-white text-sm flex justify-between gap-3 items-center">
-              <p className="">Bahasa Indonesia</p>
+              <p className="">Indonesia</p>
               <div className="flex flex-row items-center gap-1">
                 <div className="w-30 h-3 rounded-2xl border border-zinc-400">
                   <div className=" w-27 h-full rounded-2xl bg-[#39EEFA]"></div>
@@ -71,7 +77,7 @@ export default function AboutBottom() {
               </div>
             </div>
 
-            <div className="text-white text-sm flex justify-between gap-3 items-center">
+            <div className="text-white text-sm flex justify-between  gap-3 items-center">
               <p>English</p>
               <div className="flex flex-row items-center gap-1">
                 <div className="w-30 h-3 rounded-2xl border border-zinc-400">
@@ -83,84 +89,85 @@ export default function AboutBottom() {
           </div>
         </div>
 
-        <div className="flex flex-row gap-4" id="4">
-          <div className="w-8">
-            <img
-              className="w-full h-auto"
-              src="/images/icon/hobbies_icon.webp"
-              alt="hobbies icon"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-col font-manrope h-fit gap-2">
+        <div className="flex flex-col gap-1" id="4">
+          <div className="flex flex-row gap-4 min-h-8 items-center">
+            <div className="w-5 lg:w-7">
+              <img
+                className="w-full h-auto"
+                src="/images/icon/hobbies_icon.webp"
+                alt="hobbies icon"
+                loading="lazy"
+              />
+            </div>
             <p className="text-[#39EEFA] text-md">Hobbies & Interest</p>
-            <div className="flex flex-row flex-wrap font-bold items-center justify-center gap-4">
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-5">
-                  <img
-                    className="w-auto h-full"
-                    src="/images/icon/Coding.webp"
-                    alt="coding icon"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-zinc-500 text-xs">Programming</p>
+          </div>
+
+          <div className="flex flex-row flex-wrap font-bold  xl:ml-12 items-center justify-center xl:justify-start gap-4">
+            <div className="flex flex-col items-center gap-1">
+              <div className="h-5">
+                <img
+                  className="w-auto h-full"
+                  src="/images/icon/Coding.webp"
+                  alt="coding icon"
+                  loading="lazy"
+                />
               </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-5">
-                  <img
-                    className="w-auto h-full"
-                    src="/images/icon/Game.webp"
-                    alt="game icon"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-zinc-500 text-xs">Game</p>
+              <p className="text-zinc-500 text-xs">Programming</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className="h-5">
+                <img
+                  className="w-auto h-full"
+                  src="/images/icon/Game.webp"
+                  alt="game icon"
+                  loading="lazy"
+                />
               </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-5">
-                  <img
-                    className="w-auto h-full"
-                    src="/images/icon/Music.webp"
-                    alt="music icon"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-zinc-500 text-xs">Music</p>
+              <p className="text-zinc-500 text-xs">Game</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className="h-5">
+                <img
+                  className="w-auto h-full"
+                  src="/images/icon/Music.webp"
+                  alt="music icon"
+                  loading="lazy"
+                />
               </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-5">
-                  <img
-                    className="w-auto h-full"
-                    src="/images/icon/Movie.webp"
-                    alt="movie icon"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-zinc-500 text-xs">Movie</p>
+              <p className="text-zinc-500 text-xs">Music</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className="h-5">
+                <img
+                  className="w-auto h-full"
+                  src="/images/icon/Movie.webp"
+                  alt="movie icon"
+                  loading="lazy"
+                />
               </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-5">
-                  <img
-                    className="w-auto h-full"
-                    src="/images/icon/Football.webp"
-                    alt="football icon"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-zinc-500 text-xs">Football</p>
+              <p className="text-zinc-500 text-xs">Movie</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className="h-5">
+                <img
+                  className="w-auto h-full"
+                  src="/images/icon/Football.webp"
+                  alt="football icon"
+                  loading="lazy"
+                />
               </div>
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-5">
-                  <img
-                    className="w-auto h-full"
-                    src="/images/icon/Travel.webp"
-                    alt="travel icon"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-zinc-500  text-xs">Travel</p>
+              <p className="text-zinc-500 text-xs">Football</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <div className="h-5">
+                <img
+                  className="w-auto h-full"
+                  src="/images/icon/Travel.webp"
+                  alt="travel icon"
+                  loading="lazy"
+                />
               </div>
+              <p className="text-zinc-500  text-xs">Travel</p>
             </div>
           </div>
         </div>
