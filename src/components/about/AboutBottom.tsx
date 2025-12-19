@@ -66,8 +66,8 @@ export default function AboutBottom() {
             <p className="text-[#39EEFA] text-md">Languages</p>
           </div>
 
-          <div className="flex flex-col font-manrope h-fit gap-1 ml-9 lg:ml-11">
-            <div className="text-white text-sm flex justify-between gap-3 items-center">
+          <div className="flex flex-col font-manrope h-fit gap-1 ml-9 lg:ml-11 w-fit">
+            <div className="text-white text-sm flex justify-between gap-5 items-center">
               <p className="">Indonesia</p>
               <div className="flex flex-row items-center gap-1">
                 <div className="w-30 h-3 rounded-2xl border border-zinc-400">
@@ -77,7 +77,7 @@ export default function AboutBottom() {
               </div>
             </div>
 
-            <div className="text-white text-sm flex justify-between  gap-3 items-center">
+            <div className="text-white text-sm flex justify-between  gap-5 items-center">
               <p>English</p>
               <div className="flex flex-row items-center gap-1">
                 <div className="w-30 h-3 rounded-2xl border border-zinc-400">
@@ -102,7 +102,7 @@ export default function AboutBottom() {
             <p className="text-[#39EEFA] text-md">Hobbies & Interest</p>
           </div>
 
-          <div className="flex flex-row flex-wrap font-bold  xl:ml-12 items-center justify-center xl:justify-start gap-4">
+          <div className="flex flex-row flex-wrap font-bold ml-10  xl:ml-12 items-center justify-start xl:justify-start gap-4">
             <div className="flex flex-col items-center gap-1">
               <div className="h-5">
                 <img
