@@ -1,5 +1,5 @@
 // src/components/navbar/Navbar.tsx
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RxCaretDown } from "react-icons/rx";
 import { FaBars, FaTimes } from "react-icons/fa";
 import type { Section } from "../../types/sections";
