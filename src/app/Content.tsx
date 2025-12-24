@@ -1,7 +1,7 @@
-import About from "./content/About";
-import Skills from "./content/Skills";
-import Projects from "./content/Projects";
-import Footer from "./content/Footer";
+import About from "../components/content/About";
+import Skills from "../components/content/Skills";
+import Projects from "../components/content/Projects";
+import Footer from "../components/content/Footer";
 import { useOutletContext } from "react-router-dom";
 import type { OutletContextValue } from "../types/sections";
 import { FaArrowUp } from "react-icons/fa";

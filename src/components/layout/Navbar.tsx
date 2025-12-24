@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { RxCaretDown } from "react-icons/rx";
 import { FaBars, FaTimes } from "react-icons/fa";
 import type { Section } from "../../types/sections";
-import DownloadCvButton from "../button/DownloadCvButton";
+import DownloadCvButton from "../ui/DownloadCvButton";
 
 type Props = {
   goTo: (section: Section) => void;
