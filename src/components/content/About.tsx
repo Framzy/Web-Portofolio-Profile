@@ -1,6 +1,6 @@
 import type { RefObject } from "react";
-import AboutTop from "../about/AboutTop";
-import AboutBottom from "../about/AboutBottom";
+import AboutTop from "../../features/about/AboutTop";
+import AboutBottom from "../../features/about/AboutBottom";
 
 type Props = {
   sectionRef: RefObject<HTMLDivElement | null>;
