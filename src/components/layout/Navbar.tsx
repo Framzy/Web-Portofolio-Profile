@@ -1,20 +1,26 @@
 // src/components/navbar/Navbar.tsx
 import { useEffect, useRef, useState } from "react";
-import { RxCaretDown } from "react-icons/rx";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { RxCaretDown } from "react-icons/rx";
 import type { Section } from "../../types/sections";
 import DownloadCvButton from "../ui/DownloadCvButton";
 
 type Props = {
-  goTo: (section: Section) => void;
+  onNavigate: (section: Section) => void;
 };
 
-export default function Navbar({ goTo }: Props) {
+const NAV_ITEMS: { label: string; section: Section }[] = [
+  { label: "ABOUT", section: "about" },
+  { label: "SKILLS", section: "skill" },
+  { label: "PROJECTS", section: "project" },
+];
+
+export default function Navbar({ onNavigate }: Props) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
-  // tutup kalau klik di luar
+  // close on outside click / ESC
   useEffect(() => {
     function onClick(e: MouseEvent) {
       const target = e.target as Node;
@@ -28,9 +34,11 @@ export default function Navbar({ goTo }: Props) {
         setOpen(false);
       }
     }
+
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
     }
+
     document.addEventListener("mousedown", onClick);
     document.addEventListener("keydown", onKey);
     return () => {
@@ -39,7 +47,7 @@ export default function Navbar({ goTo }: Props) {
     };
   }, [open]);
 
-  // block body scroll saat menu mobile terbuka
+  // lock body scroll on mobile menu
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -47,121 +55,74 @@ export default function Navbar({ goTo }: Props) {
     };
   }, [open]);
 
-  const handleNav = (section: Section) => {
-    goTo(section);
+  const handleNavigate = (section: Section) => {
+    onNavigate(section);
     setOpen(false);
   };
 
-  const navItems = (
-    <>
-      <li>
+  const renderNavItems = (isMobile = false) =>
+    NAV_ITEMS.map((item) => (
+      <li key={item.section}>
         <button
-          className="navbar-navItem text-[#39EEFA]"
-          onClick={() => handleNav("about")}
+          type="button"
+          className={`navbar-navItem ${isMobile ? "w-full text-left" : ""}`}
+          onClick={() => handleNavigate(item.section)}
         >
-          ABOUT
+          {item.label}
         </button>
       </li>
-      <li>
-        <button className="navbar-navItem" onClick={() => handleNav("skill")}>
-          SKILLS
-        </button>
-      </li>
-      <li>
-        <button className="navbar-navItem" onClick={() => handleNav("project")}>
-          PROJECTS
-        </button>
-      </li>
-      <li>
-        <button
-          className="navbar-navItem flex items-center"
-          onClick={() => {
-            /* jika ada submenu, handle */
-          }}
-        >
-          CONNECT <RxCaretDown size={16} className="ml-2" />
-        </button>
-      </li>
-    </>
-  );
+    ));
 
   return (
     <nav className="bg-[#0A090F] border-b border-[#8A8A8A]">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
-        <div className="flex items-center gap-6">
-          <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
-        </div>
+        <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
 
         {/* Desktop menu */}
-        <ul className="hidden md:flex text-white gap-7 xl:gap-12 font-manrope text-sm items-center">
-          {navItems}
+        <ul className="hidden md:flex items-center gap-7 xl:gap-12 text-white font-manrope text-sm">
+          {renderNavItems()}
+          <li>
+            <button className="navbar-navItem flex items-center">
+              CONNECT <RxCaretDown size={16} className="ml-2" />
+            </button>
+          </li>
         </ul>
 
-        {/* Right actions (desktop) */}
+        {/* Desktop actions */}
         <div className="hidden md:flex items-center gap-4">
           <DownloadCvButton href="/cv_file/cv.pdf" fileName="Framzy_CV.pdf" />
         </div>
 
-        {/* Mobile: hamburger */}
-        <div className="md:hidden flex items-center">
-          <button
-            ref={btnRef}
-            aria-controls="mobile-menu"
-            aria-expanded={open}
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((s) => !s)}
-            className="p-2 rounded-md text-white hover:cursor-pointer"
-          >
-            {open ? <FaTimes size={20} /> : <FaBars size={20} />}
-          </button>
-        </div>
+        {/* Mobile button */}
+        <button
+          ref={btnRef}
+          aria-controls="mobile-menu"
+          aria-expanded={open}
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden p-2 text-white"
+        >
+          {open ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
       </div>
 
-      {/* Mobile menu panel */}
+      {/* Mobile menu */}
       <div
         id="mobile-menu"
         ref={menuRef}
-        className={`md:hidden fixed inset-x-4 top-16 z-50 transform transition-all duration-200 ease-out ${
+        aria-hidden={!open}
+        className={`md:hidden fixed inset-x-4 top-16 z-50 transition-all duration-200 ${
           open
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
         }`}
-        aria-hidden={!open}
       >
-        <div className="bg-[#0A090F] border border-[#2B2B2B] rounded-lg shadow-lg py-6 px-5">
-          <ul className="flex flex-col gap-4 text-white font-manrope text-base">
+        <div className="bg-[#0A090F] border border-[#2B2B2B] rounded-lg py-6 px-5">
+          <ul className="flex flex-col gap-4 text-white font-manrope">
+            {renderNavItems(true)}
             <li>
-              <button
-                className="w-full text-left navbar-navItem"
-                onClick={() => handleNav("about")}
-              >
-                ABOUT
-              </button>
-            </li>
-            <li>
-              <button
-                className="w-full text-left navbar-navItem"
-                onClick={() => handleNav("skill")}
-              >
-                SKILLS
-              </button>
-            </li>
-            <li>
-              <button
-                className="w-full text-left navbar-navItem"
-                onClick={() => handleNav("project")}
-              >
-                PROJECTS
-              </button>
-            </li>
-            <li>
-              <button
-                className="w-full text-left navbar-navItem flex items-center justify-between"
-                onClick={() => {
-                  /* handle connect submenu if ada */
-                }}
-              >
+              <button className="navbar-navItem flex items-center justify-between">
                 <span>CONNECT</span>
                 <RxCaretDown size={16} />
               </button>

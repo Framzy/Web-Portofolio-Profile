@@ -3,7 +3,7 @@ import { Suspense, lazy } from "react";
 import Layout from "./Layout";
 import ErrorPage from "../pages/ErrorPage";
 
-const Content = lazy(() => import("./Content"));
+const Content = lazy(() => import("./HomePage"));
 
 export default function AppRouter() {
   return (

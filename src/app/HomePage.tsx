@@ -3,19 +3,19 @@ import About from ".././features/about/AboutSection";
 import Skills from ".././features/skills/SkillsSection";
 import Projects from ".././features/projects/ProjectsSection";
 import { FaArrowUp } from "react-icons/fa";
-import type { Section } from "../types/sections";
+// import type { Section } from "../types/sections";
 
 export default function HomePage() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const skillRef = useRef<HTMLDivElement | null>(null);
   const projectRef = useRef<HTMLDivElement | null>(null);
 
-  const goTo = (section: Section) => {
-    refs[section].current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
+  // const goTo = (section: Section) => {
+  //   ref[section].current?.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   });
+  // };
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   const SCROLL_THRESHOLD = 400;
