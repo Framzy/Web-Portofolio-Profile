@@ -5,6 +5,12 @@ const ProjectSection = forwardRef<HTMLDivElement>(function ProjectSection(
   _,
   ref
 ) {
-  return ProjectsSwiper({ ref });
+  return (
+    <>
+      <section ref={ref} className="h-screen mt-10">
+        {ProjectsSwiper({ ref })}
+      </section>
+    </>
+  );
 });
 export default ProjectSection;

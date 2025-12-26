@@ -1,29 +1,20 @@
-import { useEffect, useRef, useState } from "react";
-import About from ".././features/about/AboutSection";
-import Skills from ".././features/skills/SkillsSection";
-import Projects from ".././features/projects/ProjectsSection";
+import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
-// import type { Section } from "../types/sections";
+import About from "../features/about/AboutSection";
+import Skills from "../features/skills/SkillsSection";
+import Projects from "../features/projects/ProjectsSection";
+import { useSectionScroll } from "../hooks/useSectionScroll";
+import Navbar from "../components/layout/Navbar";
 
 export default function HomePage() {
-  const aboutRef = useRef<HTMLDivElement | null>(null);
-  const skillRef = useRef<HTMLDivElement | null>(null);
-  const projectRef = useRef<HTMLDivElement | null>(null);
-
-  // const goTo = (section: Section) => {
-  //   ref[section].current?.scrollIntoView({
-  //     behavior: "smooth",
-  //     block: "start",
-  //   });
-  // };
-
+  const { aboutRef, skillRef, projectRef, scrollTo } = useSectionScroll();
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const SCROLL_THRESHOLD = 400;
 
   useEffect(() => {
-    let ticking = false;
+    const SCROLL_THRESHOLD = 400;
 
-    const handleScroll = () => {
+    let ticking = false;
+    const onScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
           setShowScrollTop(window.scrollY > SCROLL_THRESHOLD);
@@ -33,23 +24,26 @@ export default function HomePage() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
+      <Navbar onNavigate={scrollTo} />
+
       <About ref={aboutRef} />
       <Skills ref={skillRef} />
       <Projects ref={projectRef} />
+
       {showScrollTop && (
         <button
           type="button"
-          title="Scroll to top"
-          className="fixed bottom-10 right-10 h-10 w-10 rounded-full bg-[#39EEFA] flex items-center justify-center z-50"
+          aria-label="Scroll to top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-10 right-10 h-10 w-10 rounded-full bg-[#39EEFA] flex items-center justify-center z-50"
         >
           <FaArrowUp size={16} />
         </button>
