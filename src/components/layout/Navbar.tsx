@@ -75,7 +75,7 @@ export default function Navbar({ onNavigate }: Props) {
 
   return (
     <nav className="bg-[#0A090F] border-b border-[#8A8A8A]">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
         <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
 
@@ -98,10 +98,10 @@ export default function Navbar({ onNavigate }: Props) {
         <button
           ref={btnRef}
           aria-controls="mobile-menu"
-          aria-expanded={open}
+          aria-expanded={open ? "true" : "false"}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden p-2 text-white"
+          className="md:hidden p-2 text-white hover:cursor-pointer"
         >
           {open ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button>
@@ -111,15 +111,15 @@ export default function Navbar({ onNavigate }: Props) {
       <div
         id="mobile-menu"
         ref={menuRef}
-        aria-hidden={!open}
+        aria-hidden={open ? "false" : "true"}
         className={`md:hidden fixed inset-x-4 top-16 z-50 transition-all duration-200 ${
           open
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
-        <div className="bg-[#0A090F] border border-[#2B2B2B] rounded-lg py-6 px-5">
-          <ul className="flex flex-col gap-4 text-white font-manrope">
+        <div className="bg-[#0A090F] border border-[#2B2B2B] rounded-lg mt-2 py-6 px-5">
+          <ul className="flex flex-col gap-4 text-white text-sm font-manrope">
             {renderNavItems(true)}
             <li>
               <button className="navbar-navItem flex items-center justify-between">
