@@ -65,9 +65,7 @@ function ProjectCard({
   );
 }
 
-export default function ProjectsSwiper(
-  sectionRef: Ref<HTMLElement> | undefined
-) {
+export default function ProjectsSwiper() {
   const swiperRef = useRef<SwiperType | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
@@ -105,7 +103,7 @@ export default function ProjectsSwiper(
   }, [swiperReady]);
 
   return (
-    <section ref={sectionRef} className="h-screen my-10">
+    <>
       <div className="skills-title w-8/10 mx-auto flex flex-row justify-between items-end py-5">
         <h1 className="text-3xl font-bold text-[#39EEFA]">
           MY <span className="text-white">PROJECTS</span>
@@ -161,6 +159,6 @@ export default function ProjectsSwiper(
         className="my-4 flex justify-center gap-2 custom-pagination"
         aria-hidden="true"
       />
-    </section>
+    </>
   );
 }

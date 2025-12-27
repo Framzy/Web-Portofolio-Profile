@@ -1,3 +1,4 @@
+import ProfileImg from "../../assets/images/Profile_Framzy.webp";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function AboutTop() {
@@ -19,7 +20,7 @@ export default function AboutTop() {
           <div className="w-fit max-w-90 mx-auto">
             <img
               className="w-full h-auto"
-              src="/images/profile/Profile_Framzy.webp"
+              src={ProfileImg}
               alt="profile image"
               fetchPriority="high"
               decoding="async"

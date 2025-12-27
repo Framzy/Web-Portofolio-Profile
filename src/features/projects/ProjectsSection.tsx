@@ -8,7 +8,7 @@ const ProjectSection = forwardRef<HTMLDivElement>(function ProjectSection(
   return (
     <>
       <section ref={ref} className="h-screen mt-10">
-        {ProjectsSwiper({ ref })}
+        {ProjectsSwiper()}
       </section>
     </>
   );
