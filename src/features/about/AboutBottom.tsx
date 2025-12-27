@@ -1,3 +1,8 @@
+import EducationIcon from "../../assets/images/icons/education_icon.webp";
+import ExperienceIcon from "../../assets/images/icons/experience_icon.webp";
+import LanguagesIcon from "../../assets/images/icons/languages_icon.webp";
+import HobbiesIcon from "../../assets/images/icons/hobbies_icon.webp";
+
 import codingIcon from "../../assets/images/icons/Coding.webp";
 import GameIcon from "../../assets/images/icons/Game.webp";
 import MusicIcon from "../../assets/images/icons/Music.webp";
@@ -64,9 +69,10 @@ export default function AboutBottom() {
             <div className="w-5 lg:w-8">
               <img
                 className="w-full h-auto"
-                src="/images/icon/education_icon.webp"
+                src={EducationIcon}
                 alt="education icon"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-[#39EEFA] text-md">Education</p>
@@ -85,9 +91,10 @@ export default function AboutBottom() {
             <div className="w-5 lg:w-6">
               <img
                 className="w-full h-auto"
-                src="/images/icon/experience_icon.webp"
+                src={ExperienceIcon}
                 alt="experience icon"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-[#39EEFA] text-md">Experience & Certificate</p>
@@ -115,9 +122,10 @@ export default function AboutBottom() {
             <div className="w-5 lg:w-7">
               <img
                 className="w-full h-auto"
-                src="/images/icon/languages_icon.webp"
+                src={LanguagesIcon}
                 alt="languages icon"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-[#39EEFA] text-md">Languages</p>
@@ -133,9 +141,10 @@ export default function AboutBottom() {
             <div className="w-5 lg:w-7">
               <img
                 className="w-full h-auto"
-                src="/images/icon/hobbies_icon.webp"
+                src={HobbiesIcon}
                 alt="hobbies icon"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-[#39EEFA] text-md">Hobbies & Interest</p>
