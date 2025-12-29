@@ -1,9 +1,57 @@
 import { forwardRef } from "react";
 
+const SKILLS_PARTS: { label: string; span: number }[] = [
+  { label: "Programming languages", span: 2 },
+  { label: "Frameworks & Libraries", span: 2 },
+  { label: "Databases", span: 2 },
+  { label: "Tools, Softwares, And Others", span: 2 },
+  { label: "Operating Systems", span: 1 },
+  { label: "Cloud", span: 1 },
+];
+
+const SKILLS_ITEMS: { partIndex: number; label: string }[] = [
+  { partIndex: 1, label: "Java Script" },
+  { partIndex: 1, label: "Java" },
+  { partIndex: 1, label: "PHP" },
+  { partIndex: 1, label: "Python" },
+  { partIndex: 2, label: "React" },
+  { partIndex: 3, label: "asd" },
+  { partIndex: 4, label: "asd" },
+  { partIndex: 5, label: "asd" },
+  { partIndex: 6, label: "asd" },
+];
+
 const SkillsSection = forwardRef<HTMLDivElement>(function SkillsSection(
   _,
   ref
 ) {
+  const renderSkillsParts = () => {
+    return SKILLS_PARTS.map((part, index) => {
+      const spanClass = part.span === 2 ? "col-span-2" : "col-span-1";
+
+      return (
+        <div
+          key={index}
+          className={`${spanClass} flex flex-col gap-2 border border-[#898989] rounded-xl px-5 py-3 bg-radial from-[rgba(110,110,110,0.35)] to-[rgba(41,41,41,0.2)]`}
+        >
+          <p>
+            [0{index + 1}] {part.label}
+          </p>
+
+          <div className="flex flex-row flex-wrap gap-2">
+            {SKILLS_ITEMS.filter((item) => item.partIndex === index + 1).map(
+              (skill, idx) => (
+                <p key={idx} className="bg-[#353438] rounded-md py-2 px-5">
+                  {skill.label}
+                </p>
+              )
+            )}
+          </div>
+        </div>
+      );
+    });
+  };
+
   return (
     <>
       <section ref={ref} className="h-screen mt-10">
@@ -14,49 +62,8 @@ const SkillsSection = forwardRef<HTMLDivElement>(function SkillsSection(
           </p>
         </div>
 
-        <div className="text-white text-sm w-8/10 mx-auto flex flex-col gap-5 font-manrope">
-          <div className="content-item flex flex-col gap-2 border border-[#898989] rounded-xl px-5 py-3 bg-radial from-[rgba(110,110,110,0.35)] to-[rgba(41,41,41,0.2)]">
-            <p>[01] Programming languages</p>
-            <div className="flex flex-row">
-              <p className="border border-white rounded-md py-2 px-5">Python</p>
-            </div>
-          </div>
-          <div className="content-item flex flex-col gap-2 border border-[#898989] rounded-xl px-5 py-3 bg-radial from-[rgba(110,110,110,0.35)] to-[rgba(41,41,41,0.2)]">
-            <p>[02] Frameworks & Libraries</p>
-            <div className="flex flex-row">
-              <p className="border border-white rounded-md py-2 px-5">Python</p>
-            </div>
-          </div>
-          <div className="content-item flex flex-col gap-2 border border-[#898989] rounded-xl px-5 py-3 bg-radial from-[rgba(110,110,110,0.35)] to-[rgba(41,41,41,0.2)]">
-            <p>[03] Databases</p>
-            <div className="flex flex-row">
-              <p className="border border-white rounded-md py-2 px-5">Python</p>
-            </div>
-          </div>
-          <div className="content-item flex flex-col gap-2 border border-[#898989] rounded-xl px-5 py-3 bg-radial from-[rgba(110,110,110,0.35)] to-[rgba(41,41,41,0.2)]">
-            <p>[04] Tools, Softwares, And Others</p>
-            <div className="flex flex-row">
-              <p className="border border-white rounded-md py-2 px-5">Python</p>
-            </div>
-          </div>
-          <div className="content-item flex flex-row gap-3 justify-between">
-            <div className="w-1/2 flex flex-col gap-2 border border-[#898989] rounded-xl px-5 py-3 bg-radial from-[rgba(110,110,110,0.35)] to-[rgba(41,41,41,0.2)]">
-              <p>[05] Operating Systems</p>
-              <div className="flex flex-row">
-                <p className="border border-white rounded-md py-2 px-5">
-                  Python
-                </p>
-              </div>
-            </div>
-            <div className="w-1/2 flex flex-col gap-2 border border-[#898989] rounded-xl px-5 py-3 bg-radial from-[rgba(110,110,110,0.35)] to-[rgba(41,41,41,0.2)]">
-              <p>[06] Cloud</p>
-              <div className="flex flex-row">
-                <p className="border border-white rounded-md py-2 px-5">
-                  Python
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="text-white text-sm w-8/10 mx-auto grid grid-cols-2 gap-5 font-manrope">
+          {renderSkillsParts()}
         </div>
       </section>
     </>
