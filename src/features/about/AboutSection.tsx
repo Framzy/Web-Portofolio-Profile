@@ -7,7 +7,7 @@ const AboutSection = forwardRef<HTMLDivElement>(function AboutSection(_, ref) {
     <>
       <section
         ref={ref}
-        className="about-content min-h-screen relative overflow-hidden bg-[url('/images/background/Background.webp')] bg-cover bg-center bg-no-repeat"
+        className="about-content min-h-screen relative overflow-hidden bg-[url('../assets/images/Background.webp')] bg-cover bg-center bg-no-repeat"
       >
         <AboutTop />
         <AboutBottom />
