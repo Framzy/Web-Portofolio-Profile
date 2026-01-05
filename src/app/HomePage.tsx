@@ -34,7 +34,7 @@ export default function HomePage() {
     <>
       <Navbar onNavigate={scrollTo} />
 
-      <About ref={aboutRef} />
+      <About ref={aboutRef} onNavigate={scrollTo} />
       <Skills ref={skillRef} />
       <Projects ref={projectRef} />
 
@@ -43,7 +43,7 @@ export default function HomePage() {
           type="button"
           aria-label="Scroll to top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-10 right-10 h-10 w-10 rounded-full bg-[#39EEFA] flex items-center justify-center z-50"
+          className="fixed bottom-10 right-10 h-10 w-10 rounded-full bg-[#39EEFA] flex items-center justify-center z-50 hover:cursor-pointer"
         >
           <FaArrowUp size={16} />
         </button>

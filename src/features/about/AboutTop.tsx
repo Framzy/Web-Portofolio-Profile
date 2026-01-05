@@ -1,7 +1,23 @@
 import ProfileImg from "../../assets/images/Profile_Framzy.webp";
 import { FaArrowRight } from "react-icons/fa";
+import type { Props } from "../../types/propsNavigate";
 
-export default function AboutTop() {
+export default function AboutTop({ onNavigate }: Props) {
+  const onToProject = () => {
+    onNavigate("project");
+  };
+
+  const renderDescription = () => {
+    return (
+      <p className="pt-10 text-white text-justify">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae porro
+        quod quis voluptate. Sequi, laudantium cumque. Cumque exercitationem
+        aspernatur labore minima! Nisi reprehenderit at repellendus quos
+        deleniti explicabo reiciendis repudiandae?
+      </p>
+    );
+  };
+
   return (
     <>
       <div className="flex flex-col w-4/5 lg:w-fit mx-auto box-border p-4">
@@ -35,13 +51,7 @@ export default function AboutTop() {
               HELLO
               <span className="text-white">I’M FARDEN RAMZY MUHARRAM</span>
             </p>
-            <p className="pt-10 text-white text-justify">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-              porro quod quis voluptate. Sequi, laudantium cumque. Cumque
-              exercitationem aspernatur labore minima! Nisi reprehenderit at
-              repellendus quos deleniti explicabo reiciendis repudiandae?
-            </p>
-
+            {renderDescription()}
             <div className="flex flex-row justify-start gap-5 mt-5 text-xs lg:text-sm">
               <button
                 type="button"
@@ -50,11 +60,13 @@ export default function AboutTop() {
               >
                 Contact me
               </button>
+
               <button
                 type="button"
                 className="bg-[#0A090F] text-white flex flex-row items-center gap-1 h-fit border border-white py-2 px-2 lg:px-4
                  rounded box-border cursor-pointer 
                 transition-all duration-300 ease-in-out hover:transform hover:-skew-x-8"
+                onClick={onToProject}
               >
                 <p className="font-manrope font-bold w-full">See projects</p>
                 <FaArrowRight size={16} />

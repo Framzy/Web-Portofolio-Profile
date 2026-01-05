@@ -4,10 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { RxCaretDown } from "react-icons/rx";
 import type { Section } from "../../types/sections";
 import DownloadCvButton from "../ui/DownloadCvButton";
-
-type Props = {
-  onNavigate: (section: Section) => void;
-};
+import type { Props } from "../../types/propsNavigate";
 
 const NAV_ITEMS: { label: string; section: Section }[] = [
   { label: "ABOUT", section: "about" },
@@ -20,7 +17,6 @@ export default function Navbar({ onNavigate }: Props) {
   const menuRef = useRef<HTMLDivElement | null>(null);
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
-  // close on outside click / ESC
   useEffect(() => {
     function onClick(e: MouseEvent) {
       const target = e.target as Node;
@@ -47,7 +43,6 @@ export default function Navbar({ onNavigate }: Props) {
     };
   }, [open]);
 
-  // lock body scroll on mobile menu
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
