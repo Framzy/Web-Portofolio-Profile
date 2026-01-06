@@ -9,11 +9,6 @@
 }
 
 /* About */
-/* .about-content {
-  background-image: url("/images/background/Background.webp");
-  background-size: cover;
-  background-position: bottom;
-} */
 
 .aboutMe-line {
   position: relative;
@@ -55,13 +50,7 @@
   background-color: #39eefa;
 }
 
-/* Bar */
-/* .language-bar-indonesia{
-  border: #39eefa;
-} */
-
 /* SKILLS */
-
 .skills-title {
   position: relative;
 }
@@ -99,4 +88,9 @@
 .custom-pagination .swiper-pagination-bullet-active {
   background: #39edf9 !important;
   border: none !important;
+}
+
+/* Connect */
+.connect-section {
+  z-index: 5;
 }

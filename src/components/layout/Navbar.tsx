@@ -1,10 +1,9 @@
-// src/components/navbar/Navbar.tsx
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RxCaretDown } from "react-icons/rx";
 import type { Section } from "../../types/sections";
-import DownloadCvButton from "../ui/DownloadCvButton";
 import type { Props } from "../../types/propsNavigate";
+import DownloadCvButton from "../ui/DownloadCvButton";
 
 const NAV_ITEMS: { label: string; section: Section }[] = [
   { label: "ABOUT", section: "about" },
@@ -13,7 +12,9 @@ const NAV_ITEMS: { label: string; section: Section }[] = [
 ];
 
 export default function Navbar({ onNavigate }: Props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // mobile menu
+  const [openConnect, setOpenConnect] = useState(false); // connect dropdown
+
   const menuRef = useRef<HTMLDivElement | null>(null);
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
@@ -50,37 +51,75 @@ export default function Navbar({ onNavigate }: Props) {
     };
   }, [open]);
 
-  const handleNavigate = (section: Section) => {
-    onNavigate(section);
+  const closeMobileMenu = () => {
     setOpen(false);
+    setOpenConnect(false);
   };
 
-  const renderNavItems = (isMobile = false) =>
-    NAV_ITEMS.map((item) => (
-      <li key={item.section}>
-        <button
-          type="button"
-          className={`navbar-navItem ${isMobile ? "w-full text-left" : ""}`}
-          onClick={() => handleNavigate(item.section)}
-        >
-          {item.label}
-        </button>
-      </li>
-    ));
+  const handleNavigate = (section: Section) => {
+    onNavigate(section);
+    closeMobileMenu();
+  };
+
+  const toggleMenu = () => {
+    setOpen((v) => !v);
+    setOpenConnect(false);
+  };
+
+  const toggleConnect = () => {
+    setOpenConnect((v) => !v);
+  };
 
   return (
-    <nav className="bg-[#0A090F] border-b border-[#8A8A8A]">
+    <nav className="bg-[#0A090F] border-b border-[#8A8A8A] relative z-50">
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
         <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
 
-        {/* Desktop menu */}
+        {/* ===================== DESKTOP MENU ===================== */}
         <ul className="hidden md:flex items-center gap-7 xl:gap-12 text-white font-manrope text-sm">
-          {renderNavItems()}
-          <li>
-            <button className="navbar-navItem flex items-center">
-              CONNECT <RxCaretDown size={16} className="ml-2" />
+          {NAV_ITEMS.map((item) => (
+            <li key={item.section}>
+              <button
+                type="button"
+                className="navbar-navItem"
+                onClick={() => handleNavigate(item.section)}
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
+
+          {/* CONNECT – DESKTOP */}
+          <li className="relative">
+            <button
+              type="button"
+              onClick={toggleConnect}
+              className={`navbar-navItem flex items-center ${
+                openConnect ? "text-blue-400" : ""
+              }`}
+            >
+              CONNECT
+              <RxCaretDown
+                size={16}
+                className={`ml-2 transition-transform ${
+                  openConnect ? "rotate-180" : ""
+                }`}
+              />
             </button>
+
+            {openConnect && (
+              <div className="absolute top-full mt-3 w-48 rounded-md bg-black border border-[#2B2B2B] shadow-lg">
+                <ul className="py-2 text-sm">
+                  <li className="px-4 py-2 hover:bg-[#1A1A1A] cursor-pointer">
+                    LinkedIn
+                  </li>
+                  <li className="px-4 py-2 hover:bg-[#1A1A1A] cursor-pointer">
+                    Email
+                  </li>
+                </ul>
+              </div>
+            )}
           </li>
         </ul>
 
@@ -89,25 +128,25 @@ export default function Navbar({ onNavigate }: Props) {
           <DownloadCvButton href="/cv_file/cv.pdf" fileName="Framzy_CV.pdf" />
         </div>
 
-        {/* Mobile button */}
+        {/* ===================== MOBILE BUTTON ===================== */}
         <button
+          type="button"
           ref={btnRef}
           aria-controls="mobile-menu"
-          aria-expanded={open ? "true" : "false"}
+          aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden p-2 text-white hover:cursor-pointer"
+          onClick={() => toggleMenu()}
+          className="md:hidden p-2 text-white"
         >
           {open ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* ===================== MOBILE MENU ===================== */}
       <div
         id="mobile-menu"
         ref={menuRef}
-        aria-hidden={open ? "false" : "true"}
-        className={`md:hidden fixed inset-x-4 top-16 z-50 transition-all duration-200 ${
+        className={`md:hidden fixed inset-x-4 top-16 z-40 transition-all duration-200 ${
           open
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
@@ -115,13 +154,61 @@ export default function Navbar({ onNavigate }: Props) {
       >
         <div className="bg-[#0A090F] border border-[#2B2B2B] rounded-lg mt-2 py-6 px-5">
           <ul className="flex flex-col gap-4 text-white text-sm font-manrope">
-            {renderNavItems(true)}
+            {NAV_ITEMS.map((item) => (
+              <li key={item.section}>
+                <button
+                  type="button"
+                  className="navbar-navItem w-full text-left"
+                  onClick={() => handleNavigate(item.section)}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+
+            {/* CONNECT – MOBILE */}
             <li>
-              <button className="navbar-navItem flex items-center justify-between">
-                <span>CONNECT</span>
-                <RxCaretDown size={16} />
+              <button
+                type="button"
+                onClick={toggleConnect}
+                className="navbar-navItem w-full text-left flex justify-between items-center"
+              >
+                CONNECT
+                <RxCaretDown
+                  size={16}
+                  className={`transition-transform ${
+                    openConnect ? "rotate-180" : ""
+                  }`}
+                />
               </button>
+
+              {
+                <ul
+                  className={`
+                    mt-2 ml-2 flex flex-col gap-2
+                    transition-all duration-200 ease-out
+                    origin-top
+                    ${
+                      openConnect
+                        ? "opacity-100 translate-y-0 scale-y-100"
+                        : "h-0 opacity-0 -translate-y-2 scale-y-95 pointer-events-none"
+                    }
+                  `}
+                >
+                  <li>
+                    <a href="#" className="text-blue-400">
+                      LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-blue-400">
+                      Email
+                    </a>
+                  </li>
+                </ul>
+              }
             </li>
+
             <li className="pt-2">
               <DownloadCvButton
                 href="/cv_file/cv.pdf"
