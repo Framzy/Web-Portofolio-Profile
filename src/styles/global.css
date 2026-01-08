@@ -2,8 +2,9 @@
 
 .navbar-navItem {
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.75s ease;
 }
+
 .navbar-navItem:hover {
   color: #39eefa;
 }

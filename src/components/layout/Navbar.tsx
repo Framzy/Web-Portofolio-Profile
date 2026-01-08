@@ -46,11 +46,11 @@ export default function Navbar({ onNavigate }: Props) {
   }, [open]);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    document.body.style.overflow = open || openConnect ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, openConnect]);
 
   const closeMobileMenu = () => {
     setOpen(false);
@@ -96,9 +96,10 @@ export default function Navbar({ onNavigate }: Props) {
             <button
               type="button"
               onClick={toggleConnect}
-              className={`navbar-navItem flex items-center ${
-                openConnect ? "text-blue-400" : ""
-              }`}
+              className={`transition-all delay-75  
+                navbar-navItem flex items-center ${
+                  openConnect ? "text-[#39EEFA]" : ""
+                }`}
             >
               CONNECT
               <RxCaretDown
@@ -126,7 +127,7 @@ export default function Navbar({ onNavigate }: Props) {
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => toggleMenu()}
-          className="md:hidden p-2 text-white"
+          className="md:hidden p-2 text-white cursor-pointer"
         >
           {open ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button>
@@ -151,7 +152,7 @@ export default function Navbar({ onNavigate }: Props) {
                   className="navbar-navItem w-full text-left"
                   onClick={() => handleNavigate(item.section)}
                 >
-                  {item.label}a
+                  {item.label}
                 </button>
               </li>
             ))}
@@ -161,7 +162,9 @@ export default function Navbar({ onNavigate }: Props) {
               <button
                 type="button"
                 onClick={toggleConnect}
-                className="navbar-navItem w-full text-left flex justify-between items-center"
+                className={`navbar-navItem w-full text-left flex justify-between items-center ${
+                  openConnect ? "text-[#39EEFA]" : ""
+                }`}
               >
                 CONNECT
                 <RxCaretDown
