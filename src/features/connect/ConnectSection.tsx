@@ -8,8 +8,7 @@ type Props = {
 const CONNECT_ITEMS: { label: string; href: string; desc: string }[] = [
   { label: "LinkedIn", href: "#", desc: "lorem  ipsum dolor sit amet" },
   { label: "Email", href: "#", desc: " lorem  ipsum dolor sit amet" },
-  { label: "Email", href: "#", desc: " lorem  ipsum dolor sit amet" },
-  { label: "Email", href: "#", desc: " lorem  ipsum dolor sit amet" },
+  { label: "Instagram", href: "#", desc: " lorem  ipsum dolor sit amet" },
 ];
 
 function displayDekstop(openConnect: boolean) {
