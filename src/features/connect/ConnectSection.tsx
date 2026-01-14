@@ -1,4 +1,5 @@
 import { FaArrowUp } from "react-icons/fa";
+import { DropdownBackground } from "../../components/ui/DropdownBackground";
 
 type Props = {
   openConnect: boolean;
@@ -12,29 +13,33 @@ const CONNECT_ITEMS: { label: string; href: string; desc: string }[] = [
 ];
 
 function displayDekstop(openConnect: boolean) {
+  if (!openConnect) return null;
+
   return (
-    openConnect && (
-      <div
-        className={` absolute top-10 mt-3 w-48 rounded-md bg-black border border-[#2B2B2B] shadow-lg `}
-      >
-        <ul className="grid grid-cols-2 py-2 text-sm">
-          {CONNECT_ITEMS.map((item) => (
-            <li key={item.label} className="hover:bg-[#1A1A1A] w-90">
-              <div className=" px-4 py-2">
-                <a
-                  href={item.href}
-                  className="text-white font-medium hover:text-[#39EEFA] cursor-pointer"
-                >
-                  {item.label}
-                  <FaArrowUp className="inline-block rotate-40" size={12} />
-                </a>
-                <p className=" text-[#929292] text-xs">{item.desc}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+    <div className="absolute top-10 left-0 mt-3 w-[660px]">
+      {/* SVG Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <DropdownBackground />
       </div>
-    )
+
+      {/* Content */}
+      <ul className="relative grid grid-cols-2 py-4 text-sm">
+        {CONNECT_ITEMS.map((item) => (
+          <li key={item.label} className="hover:bg-[#1A1A1A]">
+            <div className="px-6 py-3">
+              <a
+                href={item.href}
+                className="text-white font-medium hover:text-[#39EEFA]"
+              >
+                {item.label}
+                <FaArrowUp className="inline-block rotate-45 ml-1" size={12} />
+              </a>
+              <p className="text-[#929292] text-xs">{item.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -57,7 +62,7 @@ function displayMobile(openConnect: boolean) {
           <li key={item.label}>
             <a
               href={item.href}
-              className="transition-all delay-75 text-[#39EEFA] hover:text-white"
+              className="transition-all delay-75 text-[#00eeff] hover:text-white"
             >
               {item.label}
             </a>

@@ -13,7 +13,7 @@ const NAV_ITEMS: { label: string; section: Section }[] = [
 ];
 
 export default function Navbar({ onNavigate }: Props) {
-  const [open, setOpen] = useState(false); // mobile menu
+  const [open, setOpen] = useState(false); // mobile hamburger menu
   const [openConnect, setOpenConnect] = useState(false); // connect dropdown
 
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -31,10 +31,16 @@ export default function Navbar({ onNavigate }: Props) {
       ) {
         setOpen(false);
       }
+      if (openConnect && btnRef.current && !btnRef.current.contains(target)) {
+        setOpenConnect((v) => !v);
+      }
     }
 
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        setOpenConnect(false);
+      }
     }
 
     document.addEventListener("mousedown", onClick);
@@ -43,7 +49,7 @@ export default function Navbar({ onNavigate }: Props) {
       document.removeEventListener("mousedown", onClick);
       document.removeEventListener("keydown", onKey);
     };
-  }, [open]);
+  }, [open, openConnect]);
 
   useEffect(() => {
     document.body.style.overflow = open || openConnect ? "hidden" : "";
