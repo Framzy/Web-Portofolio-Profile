@@ -31,9 +31,6 @@ export default function Navbar({ onNavigate }: Props) {
       ) {
         setOpen(false);
       }
-      if (openConnect && btnRef.current && !btnRef.current.contains(target)) {
-        setOpenConnect((v) => !v);
-      }
     }
 
     function onKey(e: KeyboardEvent) {
@@ -84,12 +81,12 @@ export default function Navbar({ onNavigate }: Props) {
         <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
 
         {/* ===================== DESKTOP MENU ===================== */}
-        <ul className="hidden md:flex items-center gap-7 xl:gap-12 text-white font-manrope text-sm">
+        <ul className="hidden md:flex items-center gap-7 xl:gap-12 text-white font-manrope text-sm  ">
           {NAV_ITEMS.map((item) => (
             <li key={item.section}>
               <button
                 type="button"
-                className="navbar-navItem"
+                className="navbar-navItem transition-colors duration-100 delay-75 ease-in-out"
                 onClick={() => handleNavigate(item.section)}
               >
                 {item.label}
@@ -102,7 +99,7 @@ export default function Navbar({ onNavigate }: Props) {
             <button
               type="button"
               onClick={toggleConnect}
-              className={`transition-all delay-75  
+              className={`transition-colors duration-100 delay-75 ease-in-out 
                 navbar-navItem flex items-center ${
                   openConnect ? "text-[#39EEFA]" : ""
                 }`}
@@ -110,18 +107,17 @@ export default function Navbar({ onNavigate }: Props) {
               CONNECT
               <RxCaretDown
                 size={16}
-                className={`ml-2 transition-transform ${
+                className={`ml-2 transition-transform delay-75 duration-200 ${
                   openConnect ? "rotate-180" : ""
                 }`}
               />
             </button>
-
             {ConnectSection({ display: "desktop", openConnect })}
           </li>
         </ul>
 
         {/* Desktop actions */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4 ">
           <DownloadCvButton href="/cv_file/cv.pdf" fileName="Framzy_CV.pdf" />
         </div>
 
@@ -143,7 +139,7 @@ export default function Navbar({ onNavigate }: Props) {
       <div
         id="mobile-menu"
         ref={menuRef}
-        className={`md:hidden fixed inset-x-4 top-16 z-40 transition-all duration-200 ${
+        className={`md:hidden fixed inset-x-4 top-16 z-40 transition-all duration-200  ${
           open
             ? "opacity-100 scale-100"
             : "opacity-0 scale-95 pointer-events-none"
@@ -175,7 +171,7 @@ export default function Navbar({ onNavigate }: Props) {
                 CONNECT
                 <RxCaretDown
                   size={16}
-                  className={`transition-transform ${
+                  className={`ml-2 transition-transform delay-75 duration-200 ${
                     openConnect ? "rotate-180" : ""
                   }`}
                 />

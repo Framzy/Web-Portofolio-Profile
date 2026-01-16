@@ -24,7 +24,7 @@ export default function DownloadCvButton({ href, fileName }: Props) {
     <>
       <button
         onClick={open}
-        className="bg-white text-black font-bold font-manrope h-11 w-40 md:w-50 lg:w-57 mr-2 rounded hover:bg-[#39EEFA] cursor-pointer transition-all duration-300 ease-in-out
+        className="bg-white text-black font-bold font-manrope h-11 w-40 md:w-50 lg:w-57 mr-2 rounded hover:bg-[#39EEFA] cursor-pointer transition-all duration-300 delay-75 ease-in-out
           text-sm
         "
       >
@@ -44,7 +44,7 @@ export default function DownloadCvButton({ href, fileName }: Props) {
           />
 
           <div
-            className={`relative z-10 bg-[#0A0A0A] font-manrope p-6 rounded text-white border border-[#39EEFA]
+            className={`relative z-10 bg-[#0A0A0A] font-manrope p-6 rounded-xl text-white border border-[#ffffff]
               transform transition-all duration-300 ease-out
               ${
                 isVisible
