@@ -1,27 +1,12 @@
-import EducationIcon from "../../assets/images/icons/education_icon.webp";
-import ExperienceIcon from "../../assets/images/icons/experience_icon.webp";
-import LanguagesIcon from "../../assets/images/icons/languages_icon.webp";
-import HobbiesIcon from "../../assets/images/icons/hobbies_icon.webp";
-
-import codingIcon from "../../assets/images/icons/Coding.webp";
-import GameIcon from "../../assets/images/icons/Game.webp";
-import MusicIcon from "../../assets/images/icons/Music.webp";
-import MovieIcon from "../../assets/images/icons/Movie.webp";
-import FootballIcon from "../../assets/images/icons/Football.webp";
-import TravelIcon from "../../assets/images/icons/Travel.webp";
+import { HOBBIES_ITEMS } from "./../data/HobbiesItems.data";
+import EducationIcon from "../../../assets/images/icons/education_icon.webp";
+import ExperienceIcon from "../../../assets/images/icons/experience_icon.webp";
+import LanguagesIcon from "../../../assets/images/icons/languages_icon.webp";
+import HobbiesIcon from "../../../assets/images/icons/hobbies_icon.webp";
 
 const LANGUAGES_ITEMS: { label: string; persen: string; width: string }[] = [
   { label: "Indonesia", persen: "90%", width: "w-27" },
   { label: "English", persen: "70%", width: "w-23" },
-];
-
-const HOBBIES_ITEMS: { src: string; alt: string; label: string }[] = [
-  { src: codingIcon, alt: "Programming icon", label: "Programming" },
-  { src: GameIcon, alt: "Gaming icon", label: "Gaming" },
-  { src: MusicIcon, alt: "Music icon", label: "Music" },
-  { src: MovieIcon, alt: "Movie icon", label: "Movies" },
-  { src: FootballIcon, alt: "Football icon", label: "Football" },
-  { src: TravelIcon, alt: "Travel icon", label: "Traveling" },
 ];
 
 export default function AboutBottom() {

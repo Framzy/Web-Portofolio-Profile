@@ -1,6 +1,6 @@
-import ProfileImg from "../../assets/images/Profile_Framzy.webp";
+import ProfileImg from "../../../assets/images/Profile_Framzy.webp";
 import { FaArrowRight } from "react-icons/fa";
-import type { Props } from "../../types/propsNavigate";
+import type { Props } from "../../../types/propsNavigate";
 
 export default function AboutTop({ onNavigate }: Props) {
   const onToProject = () => {

@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
-import AboutTop from "./AboutTop";
-import AboutBottom from "./AboutBottom";
+import AboutTop from "./components/AboutTop";
+import AboutBottom from "./components/AboutBottom";
 import type { Props } from "../../types/propsNavigate";
 
 const AboutSection = forwardRef<HTMLDivElement, Props>(function AboutSection(
   { onNavigate }: Props,
-  ref
+  ref,
 ) {
   return (
     <>
