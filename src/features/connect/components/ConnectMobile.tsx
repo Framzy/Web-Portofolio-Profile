@@ -5,12 +5,12 @@ export function ConnectMobile(openConnect: boolean) {
     <>
       <ul
         className={`
-                    mt-2 ml-2 flex flex-col gap-2
-                  transition-transform origin-top duration-300 delay-75 ease-in-out
+                    mt-3 ml-2 flex flex-col gap-2
+                  transition-transform duration-200 delay-200 transform origin-top ease-in-out
                     ${
                       openConnect
-                        ? "opacity-100 translate-y-0 scale-y-100"
-                        : "h-0 opacity-0 translate-y-0 scale-y-80 pointer-events-none"
+                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                        : "h-0 opacity-0 -translate-y-2 pointer-events-none"
                     }
                   `}
       >

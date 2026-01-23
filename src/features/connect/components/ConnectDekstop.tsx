@@ -6,17 +6,17 @@ export function ConnectDesktop(openConnect: boolean) {
   return (
     <div
       className={`absolute top-full left-1/2 -translate-x-1/2 mt-8 w-md lg:w-lg max-w-lg z-50
-        transition-all duration-300 ease
+        transition-all duration-300 delay-75 ease-in-out transform 
         ${
           openConnect
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-10 pointer-events-none"
+            ? "opacity-100 scale-100"
+            : "opacity-0 scale-95 pointer-events-none"
         }
       `}
     >
       {/* SVG Background */}
       <div
-        className={`absolute inset-0 z-0 transition-all duration-300 ease transform
+        className={`absolute inset-0 z-0 transition-all duration-300 delay-75 ease-in-out transform 
           ${openConnect ? "opacity-100 scale-100" : "opacity-0 scale-95"}
         `}
       >

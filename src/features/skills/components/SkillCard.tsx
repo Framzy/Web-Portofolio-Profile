@@ -9,7 +9,7 @@ type Props = skill & {
 };
 
 export default function SkillCard({ index, label, span, items }: Props) {
-  const spanClass = span === 2 ? "col-span-2" : "col-span-1";
+  const spanClass = span === 2 ? "col-span-2 " : "col-span-2 md:col-span-1 ";
 
   return (
     <div
