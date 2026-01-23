@@ -3,7 +3,8 @@
 
 @font-face {
   font-family: "Vollkorn";
-  src: url("/fonts/Vollkorn-Regular.woff2") format("woff2"),
+  src:
+    url("/fonts/Vollkorn-Regular.woff2") format("woff2"),
     url("/fonts/Vollkorn-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -12,7 +13,8 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/Manrope-Regular.woff2") format("woff2"),
+  src:
+    url("/fonts/Manrope-Regular.woff2") format("woff2"),
     url("/fonts/Manrope-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -22,8 +24,30 @@
 @theme {
   --font-vollkorn: "Vollkorn", serif;
   --font-manrope: "Manrope", sans-serif;
-
   --text-primary-color: #39eefa;
+  --animate-fade-in-up: fadeInUp 0.2s ease-out forwards;
+  --animate-fade-out-down: fadeOutDown 0.2s ease-out forwards;
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
 }
 
 body {

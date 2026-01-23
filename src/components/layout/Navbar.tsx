@@ -80,7 +80,6 @@ export default function Navbar({ onNavigate }: Props) {
         {/* Brand */}
         <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
 
-        {/* ===================== DESKTOP MENU ===================== */}
         <ul className="hidden md:flex items-center gap-7 xl:gap-12 text-white font-manrope text-sm  ">
           {NAV_ITEMS.map((item) => (
             <li key={item.section}>
@@ -94,7 +93,6 @@ export default function Navbar({ onNavigate }: Props) {
             </li>
           ))}
 
-          {/* CONNECT – DESKTOP */}
           <li className="relative">
             <button
               type="button"
@@ -116,12 +114,10 @@ export default function Navbar({ onNavigate }: Props) {
           </li>
         </ul>
 
-        {/* Desktop actions */}
         <div className="hidden md:flex items-center gap-4 ">
           <DownloadCvButton href="/cv_file/cv.pdf" fileName="Framzy_CV.pdf" />
         </div>
 
-        {/* ===================== MOBILE BUTTON ===================== */}
         <button
           type="button"
           ref={btnRef}
@@ -135,14 +131,13 @@ export default function Navbar({ onNavigate }: Props) {
         </button>
       </div>
 
-      {/* ===================== MOBILE MENU ===================== */}
       <div
         id="mobile-menu"
         ref={menuRef}
-        className={`md:hidden fixed inset-x-4 top-16 z-40 transition-all duration-200  ${
+        className={`md:hidden fixed inset-x-4 top-16 z-40 transition-all transform duration-200 delay-75 ${
           open
             ? "opacity-100 scale-100"
-            : "opacity-0 scale-95 pointer-events-none"
+            : "opacity-0 scale-90 pointer-events-none"
         }`}
       >
         <div className="bg-[#0A090F] border border-[#2B2B2B] rounded-lg mt-2 py-6 px-5">

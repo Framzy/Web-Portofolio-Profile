@@ -4,7 +4,7 @@ export function DropdownBackground() {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 659 241"
-      className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-full h-full "
       aria-hidden
       preserveAspectRatio="none"
     >

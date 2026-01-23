@@ -19,31 +19,39 @@ export default function HomePage() {
 
       <About ref={aboutRef} onNavigate={scrollTo} />
 
-      {showScrollHint && (
-        <button
-          type="button"
-          aria-label="Scroll down"
-          onClick={() => scrollTo("skill")}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-1 text-[#39EEFA] hover:text-white hover:cursor-pointer transition"
-        >
-          <span className="text-xs tracking-wide font-manrope">SCROLL</span>
-          <span className="animate-bounce">↓</span>
-        </button>
-      )}
+      <div
+        className={`fixed inset-x-0 bottom-0 h-40 z-30 transition-all duration-200 delay-75 ease-in-out
+                      ${showScrollHint ? " animate-fade-in-up opacity-100" : "opacity-0 animate-fade-out-down"} *:`}
+      >
+        <div className="absolute inset-0 bg-linear-to-t from-[#000000db] to-transparent">
+          <button
+            type="button"
+            aria-label="Scroll down"
+            onClick={() => scrollTo("skill")}
+            className={`absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-1 text-[#39EEFA]
+                        transition-all duration-400 
+                      hover:text-white hover:cursor-pointer `}
+          >
+            <span className="text-xs tracking-wide font-manrope">SCROLL</span>
+            <span className="animate-bounce">↓</span>
+          </button>
+        </div>
+      </div>
 
       <Skills ref={skillRef} />
       <Projects ref={projectRef} />
 
-      {showScrollTop && (
-        <button
-          type="button"
-          aria-label="Scroll to top"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-10 right-10 h-10 w-10 rounded-full bg-[#39EEFA] flex items-center justify-center z-50 hover:cursor-pointer"
-        >
-          <FaArrowUp size={16} />
-        </button>
-      )}
+      <button
+        type="button"
+        aria-label="Scroll to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`fixed bottom-10 right-10 h-10 w-10 rounded-full bg-[#39EEFA] flex items-center justify-center z-30 
+                    transition-all duration-300 delay-75 ease-in-out hover:cursor-pointer
+                    ${showScrollTop ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"}
+                    `}
+      >
+        <FaArrowUp size={16} />
+      </button>
     </>
   );
 }
