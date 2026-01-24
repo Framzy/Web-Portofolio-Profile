@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { SKILLS } from "./data/Skills.data";
+import { SKILLS } from "./data/SkillsItems.data";
 import SkillCard from "./components/SkillCard";
 
 const SkillsSection = forwardRef<HTMLDivElement>(

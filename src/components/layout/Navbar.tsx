@@ -114,21 +114,21 @@ export default function Navbar({ onNavigate }: Props) {
           </li>
         </ul>
 
-        <div className="hidden md:flex items-center gap-4 ">
+        <div className="flex items-center gap-4">
           <DownloadCvButton href="/cv_file/cv.pdf" fileName="Framzy_CV.pdf" />
-        </div>
 
-        <button
-          type="button"
-          ref={btnRef}
-          aria-controls="mobile-menu"
-          aria-expanded={open}
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => toggleMenu()}
-          className="md:hidden p-2 text-white cursor-pointer"
-        >
-          {open ? <FaTimes size={20} /> : <FaBars size={20} />}
-        </button>
+          <button
+            type="button"
+            ref={btnRef}
+            aria-controls="mobile-menu"
+            aria-expanded={open}
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => toggleMenu()}
+            className="md:hidden p-2 text-white cursor-pointer transition-colors duration-100 delay-75 ease-in-out hover:text-[#39EEFA]"
+          >
+            {open ? <FaTimes size={20} /> : <FaBars size={20} />}
+          </button>
+        </div>
       </div>
 
       <div
