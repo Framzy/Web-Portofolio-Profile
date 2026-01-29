@@ -16,7 +16,7 @@ function chunk<T>(arr: T[], size = 2): T[][] {
 
 // card kecil untuk tiap project (reuseable)
 
-export default function ProjectsSwiper(openDisplay: boolean) {
+export default function ProjectsSwiper() {
   const swiperRef = useRef<SwiperType | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
@@ -53,13 +53,9 @@ export default function ProjectsSwiper(openDisplay: boolean) {
     };
   }, [swiperReady]);
 
-  if (openDisplay) return null;
-
   return (
     <>
-      <div
-        className={`${openDisplay ? "hidden" : ""} w-full flex flex-row items-center justify-center gap-5`}
-      >
+      <div className={`w-full flex flex-row items-center justify-center gap-5`}>
         <div className="left-slide-content">
           <button
             title="prevButton"

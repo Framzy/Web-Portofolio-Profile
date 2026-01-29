@@ -15,6 +15,5 @@ export const PROJECTS_ITEMS: { id: string; title: string; link?: string }[] = [
     link: "https://framzy-react-tic-tac-toe.vercel.app/",
   },
   { id: "project_04", title: "Posyandu APP - Thesis", link: "#" },
-  { id: "project_05", title: "Posyandu APP - Thesis", link: "#" },
-  { id: "project_06", title: "School Library App", link: "#" },
+  { id: "project_05", title: "School Library App", link: "#" },
 ];

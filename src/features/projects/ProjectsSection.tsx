@@ -1,12 +1,10 @@
-import { forwardRef, useState } from "react";
-import ProjectsSwiper from "./layouts/ProjectSwiper";
-import ProjectsGrid from "./layouts/ProjectGrid";
+import { forwardRef } from "react";
+import { useProjectsView } from "./hooks/useProjectsView";
+import ProjectLayout from "./layouts/ProjectLayout";
 
 const ProjectSection = forwardRef<HTMLDivElement>(
   function ProjectSection(_, ref) {
-    const [openDisplay, setOpenDisplay] = useState(false);
-    const display = openDisplay ? "grid" : "swiper";
-
+    const { view, toggleView } = useProjectsView();
     return (
       <>
         <section ref={ref} className="projects-content min-h-screen">
@@ -18,22 +16,19 @@ const ProjectSection = forwardRef<HTMLDivElement>(
               ///////////////// MY_PROJECTS
             </p>
           </div>
-
-          {openDisplay
-            ? ProjectsSwiper(openDisplay)
-            : ProjectsGrid(openDisplay)}
-
-          <button
-            type="button"
-            className="mt-5 bg-white text-black text-xs md:text-sm font-bold font-manrope h-10 md:h-12 w-40 md:w-50 lg:w-57 mr-2 rounded hover:bg-[#39EEFA] cursor-pointer transition-all duration-300 delay-75 ease-in-out"
-            onClick={() => {
-              setOpenDisplay((v) => !v);
-              console.log(openDisplay);
-              console.log(display);
-            }}
-          >
-            Toggle Display Mode
-          </button>
+          <ProjectLayout view={view} />
+          <div className="w-8/10 mx-auto flex justify-center">
+            <button
+              type="button"
+              className="mt-5 mr-2 h-10 md:h-12 w-40 md:w-50 lg:w-57 bg-white text-black 
+                  text-xs md:text-sm font-bold font-manrope 
+                  transition-all duration-200 delay-75 ease-in-out
+                  rounded cursor-pointer hover:bg-[#39EEFA]  "
+              onClick={toggleView}
+            >
+              Toggle Display Mode
+            </button>
+          </div>
         </section>
       </>
     );

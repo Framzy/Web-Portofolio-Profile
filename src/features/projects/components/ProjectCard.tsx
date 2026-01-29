@@ -1,8 +1,6 @@
-type project = {
-  id: string;
-  title: string;
-  link?: string;
-};
+import type { Project } from "../types";
+
+type project = Project;
 
 export function ProjectCard({ project }: { project: project }) {
   return (
