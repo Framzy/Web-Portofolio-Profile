@@ -5,8 +5,8 @@ import type { Swiper as SwiperType } from "swiper";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/pagination";
-import { PROJECTS } from "./data/ProjectItems.data";
-import { ProjectCard } from "./components/ProjectCard";
+import { PROJECTS_ITEMS } from "../data/ProjectItems.data";
+import { ProjectCard } from "../components/ProjectCard";
 
 function chunk<T>(arr: T[], size = 2): T[][] {
   const out: T[][] = [];
@@ -16,11 +16,11 @@ function chunk<T>(arr: T[], size = 2): T[][] {
 
 // card kecil untuk tiap project (reuseable)
 
-export default function ProjectsSwiper() {
+export default function ProjectsSwiper(openDisplay: boolean) {
   const swiperRef = useRef<SwiperType | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
-  const slides = chunk(PROJECTS, 2);
+  const slides = chunk(PROJECTS_ITEMS, 2);
 
   function handleOnSwiper(sw: SwiperType) {
     swiperRef.current = sw;
@@ -53,18 +53,13 @@ export default function ProjectsSwiper() {
     };
   }, [swiperReady]);
 
+  if (openDisplay) return null;
+
   return (
     <>
-      <div className="skills-title w-8/10 mx-auto flex flex-row justify-between items-end py-5">
-        <h1 className="text-3xl font-bold text-[#39EEFA]">
-          MY <span className="text-white">PROJECTS</span>
-        </h1>
-        <p className=" text-white font-thin font-poppins text-[10px]">
-          ///////////////// MY_PROJECTS
-        </p>
-      </div>
-
-      <div className="w-full flex flex-row items-center justify-center gap-5">
+      <div
+        className={`${openDisplay ? "hidden" : ""} w-full flex flex-row items-center justify-center gap-5`}
+      >
         <div className="left-slide-content">
           <button
             title="prevButton"
