@@ -1,8 +1,10 @@
-export function ProjectCard({
-  project,
-}: {
-  project: { id: string; title: string; link?: string };
-}) {
+type project = {
+  id: string;
+  title: string;
+  link?: string;
+};
+
+export function ProjectCard({ project }: { project: project }) {
   return (
     <div className="item-1 flex flex-col gap-2 w-fit ">
       <p className="text-xs ">{project.id}</p>

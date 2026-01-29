@@ -1,4 +1,4 @@
-export const PROJECTS = [
+export const PROJECTS_ITEMS: { id: string; title: string; link?: string }[] = [
   {
     id: "project_01",
     title: "Contact Management",
@@ -14,7 +14,7 @@ export const PROJECTS = [
     title: "Tic Tac Toe",
     link: "https://framzy-react-tic-tac-toe.vercel.app/",
   },
-  { id: "project_04", title: "Posyandu APP - Thesis" },
+  { id: "project_04", title: "Posyandu APP - Thesis", link: "#" },
   { id: "project_05", title: "Posyandu APP - Thesis", link: "#" },
   { id: "project_06", title: "School Library App", link: "#" },
 ];
