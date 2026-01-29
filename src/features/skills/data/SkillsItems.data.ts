@@ -1,20 +1,21 @@
-export const SKILLS = [
-  {
-    label: "Programming languages",
-    span: 2,
-    items: ["JavaScript", "TypeScript", "Java", "PHP", "Python"],
-  },
-  {
-    label: "Frameworks & Libraries",
-    span: 2,
-    items: ["React", "Tailwind", "Bootstrap"],
-  },
-  { label: "Databases", span: 2, items: ["MySQL", "PostgreSQL"] },
-  {
-    label: "Tools, Softwares, And Others",
-    span: 2,
-    items: ["VS Code", "Git", "GitHub"],
-  },
-  { label: "Operating Systems", span: 1, items: ["Windows", "Mac"] },
-  { label: "Cloud", span: 1, items: ["Vercel", "Supabase"] },
-];
+export const SKILLS_ITEMS: { label: string; span: number; items: string[] }[] =
+  [
+    {
+      label: "Programming languages",
+      span: 2,
+      items: ["JavaScript", "TypeScript", "Java", "PHP", "Python"],
+    },
+    {
+      label: "Frameworks & Libraries",
+      span: 2,
+      items: ["React", "Tailwind", "Bootstrap"],
+    },
+    { label: "Databases", span: 2, items: ["MySQL", "PostgreSQL"] },
+    {
+      label: "Tools, Softwares, And Others",
+      span: 2,
+      items: ["VS Code", "Git", "GitHub"],
+    },
+    { label: "Operating Systems", span: 1, items: ["Windows", "Mac"] },
+    { label: "Cloud", span: 1, items: ["Vercel", "Supabase"] },
+  ];
