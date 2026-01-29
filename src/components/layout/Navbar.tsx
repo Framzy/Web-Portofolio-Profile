@@ -76,7 +76,7 @@ export default function Navbar({ onNavigate }: Props) {
 
   return (
     <nav className="bg-[#0A090F] border-b border-[#8A8A8A] relative z-50">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-full mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
         <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
 
@@ -114,8 +114,16 @@ export default function Navbar({ onNavigate }: Props) {
           </li>
         </ul>
 
-        <div className="flex items-center gap-4">
-          <DownloadCvButton href="/cv_file/cv.pdf" fileName="Framzy_CV.pdf" />
+        <div className="flex items-center gap-2">
+          <div
+            className={` transition-opacity duration-200 delay-75 ease-in-out
+             ${open ? "opacity-0 scale-0" : " opacity-100 scale-100"} `}
+          >
+            <DownloadCvButton
+              href="/cv_file/cv.pdf"
+              fileName="Farden_Ramzy_Muharram_CV.pdf"
+            />
+          </div>
 
           <button
             type="button"
@@ -178,7 +186,7 @@ export default function Navbar({ onNavigate }: Props) {
             <li className="pt-2">
               <DownloadCvButton
                 href="/cv_file/cv.pdf"
-                fileName="Framzy_CV.pdf"
+                fileName="Farden_Ramzy_Muharram_CV.pdf"
               />
             </li>
           </ul>

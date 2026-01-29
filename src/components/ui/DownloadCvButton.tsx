@@ -26,7 +26,7 @@ export default function DownloadCvButton({ href, fileName }: Props) {
         type="button"
         aria-label="Download CV"
         onClick={open}
-        className="bg-white text-black text-xs md:text-md font-bold font-manrope h-10 md:h-11 w-40 md:w-50 lg:w-57 mr-2 rounded hover:bg-[#39EEFA] cursor-pointer transition-all duration-300 delay-75 ease-in-out
+        className="bg-white text-black text-xs md:text-sm font-bold font-manrope h-10 md:h-12 w-40 md:w-50 lg:w-57 mr-2 rounded hover:bg-[#39EEFA] cursor-pointer transition-all duration-300 delay-75 ease-in-out
         "
       >
         DOWNLOAD CV

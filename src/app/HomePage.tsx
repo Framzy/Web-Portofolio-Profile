@@ -1,9 +1,9 @@
 import { FaArrowUp } from "react-icons/fa";
+import { useSectionScroll } from "../hooks/useSectionScroll";
+import { useScrollHint } from "../hooks/useScrollHint";
 import About from "../features/about/AboutSection";
 import Skills from "../features/skills/SkillsSection";
 import Projects from "../features/projects/ProjectsSection";
-import { useSectionScroll } from "../hooks/useSectionScroll";
-import { useScrollHint } from "../hooks/useScrollHint";
 import Navbar from "../components/layout/Navbar";
 
 export default function HomePage() {
@@ -13,6 +13,7 @@ export default function HomePage() {
     hintTreshold: 100,
     topTreshold: 400,
   });
+
   return (
     <>
       <Navbar onNavigate={scrollTo} />
