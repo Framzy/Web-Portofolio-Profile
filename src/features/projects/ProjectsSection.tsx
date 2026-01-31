@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { useProjectsView } from "./hooks/useProjectsView";
-import ProjectLayout from "./layouts/ProjectLayout";
+import { PROJECTS_ITEMS } from "./data/ProjectItems.data";
+import ProjectsLayout from "./layouts/ProjectsLayout";
 
 const ProjectSection = forwardRef<HTMLDivElement>(
   function ProjectSection(_, ref) {
@@ -16,8 +17,8 @@ const ProjectSection = forwardRef<HTMLDivElement>(
               ///////////////// MY_PROJECTS
             </p>
           </div>
-          <ProjectLayout view={view} />
-          <div className="w-8/10 mx-auto flex justify-center">
+          <div className="w-8/10 mx-auto flex justify-center flex-col items-center">
+            <ProjectsLayout view={view} projects={PROJECTS_ITEMS} />
             <button
               type="button"
               className="mt-5 mr-2 h-10 md:h-12 w-40 md:w-50 lg:w-57 bg-white text-black 

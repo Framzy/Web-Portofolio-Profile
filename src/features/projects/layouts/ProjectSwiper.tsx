@@ -1,12 +1,16 @@
+import type { Swiper as SwiperType } from "swiper";
+import type { Project } from "../types";
 import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import type { Swiper as SwiperType } from "swiper";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
+import { ProjectCard } from "../components/ProjectCard";
 import "swiper/css";
 import "swiper/css/pagination";
-import { PROJECTS_ITEMS } from "../data/ProjectItems.data";
-import { ProjectCard } from "../components/ProjectCard";
+
+type ProjectsSwiperProps = {
+  projects: Project[];
+};
 
 function chunk<T>(arr: T[], size = 2): T[][] {
   const out: T[][] = [];
@@ -16,11 +20,11 @@ function chunk<T>(arr: T[], size = 2): T[][] {
 
 // card kecil untuk tiap project (reuseable)
 
-export default function ProjectsSwiper() {
+export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
   const swiperRef = useRef<SwiperType | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
-  const slides = chunk(PROJECTS_ITEMS, 2);
+  const slides = chunk(projects, 2);
 
   function handleOnSwiper(sw: SwiperType) {
     swiperRef.current = sw;

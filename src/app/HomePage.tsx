@@ -22,7 +22,12 @@ export default function HomePage() {
 
       <div
         className={`fixed inset-x-0 bottom-0 h-40 z-30 transition-all duration-200 delay-75 ease-in-out
-                      ${showScrollHint ? " animate-fade-in-up opacity-100" : "opacity-0 animate-fade-out-down"} *:`}
+                    ${
+                      showScrollHint
+                        ? "animate-fade-in-up opacity-100 pointer-events-auto"
+                        : "opacity-0 animate-fade-out-down pointer-events-none"
+                    }
+                  `}
       >
         <div className="absolute inset-0 bg-linear-to-t from-[#000000db] to-transparent">
           <button
