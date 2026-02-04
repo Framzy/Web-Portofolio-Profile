@@ -1,9 +1,9 @@
-import codingIcon from "../../../assets/images/icons/Coding.webp";
-import GameIcon from "../../../assets/images/icons/Game.webp";
-import MusicIcon from "../../../assets/images/icons/Music.webp";
-import MovieIcon from "../../../assets/images/icons/Movie.webp";
-import FootballIcon from "../../../assets/images/icons/Football.webp";
-import TravelIcon from "../../../assets/images/icons/Travel.webp";
+import codingIcon from "../../../assets/about/images/icons/Coding.webp";
+import GameIcon from "../../../assets/about/images/icons/Game.webp";
+import MusicIcon from "../../../assets/about/images/icons/Music.webp";
+import MovieIcon from "../../../assets/about/images/icons/Movie.webp";
+import FootballIcon from "../../../assets/about/images/icons/Football.webp";
+import TravelIcon from "../../../assets/about/images/icons/Travel.webp";
 
 export const HOBBIES_ITEMS: { src: string; alt: string; label: string }[] = [
   { src: codingIcon, alt: "Programming icon", label: "Programming" },
