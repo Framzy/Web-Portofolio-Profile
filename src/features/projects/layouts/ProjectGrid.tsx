@@ -1,4 +1,4 @@
-import { ProjectCard } from "../components/ProjectCard";
+import { ProjectCard } from "../components/layout/ProjectCard";
 import type { Project } from "../types";
 
 type ProjectsGridProps = {
