@@ -6,3 +6,5 @@ export type Project = {
   techBadges?: string[];
   isFeatured?: boolean;
 };
+
+export type ProjectsView = "grid" | "swiper";

@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-export type ProjectsView = "grid" | "swiper";
+import type { ProjectsView } from "../types";
 
 export function useProjectsView() {
   const [view, setView] = useState<ProjectsView>("swiper");

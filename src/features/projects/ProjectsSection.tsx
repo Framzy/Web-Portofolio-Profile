@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import { useProjectsView } from "./hooks/useProjectsView";
 import { PROJECTS_ITEMS } from "./data/ProjectItems.data";
 import ProjectsLayout from "./layouts/ProjectsLayout";
+import SeeAllProjectButton from "./components/ui/SeeAllProjectButton";
 
 const ProjectSection = forwardRef<HTMLDivElement>(
   function ProjectSection(_, ref) {
@@ -19,16 +20,7 @@ const ProjectSection = forwardRef<HTMLDivElement>(
           </div>
           <div className="w-8/10 mx-auto flex justify-center flex-col items-center">
             <ProjectsLayout view={view} projects={PROJECTS_ITEMS} />
-            <button
-              type="button"
-              className="mt-5 mr-2 h-10 md:h-12 w-40 md:w-50 lg:w-57 bg-white text-black 
-                  text-xs md:text-sm font-bold font-manrope 
-                  transition-all duration-200 delay-75 ease-in-out
-                  rounded cursor-pointer hover:bg-[#39EEFA]  "
-              onClick={toggleView}
-            >
-              Toggle Display Mode
-            </button>
+            <SeeAllProjectButton toggleView={toggleView} />
           </div>
         </section>
       </>
