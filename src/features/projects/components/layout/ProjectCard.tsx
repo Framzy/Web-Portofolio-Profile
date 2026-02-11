@@ -1,13 +1,16 @@
 import type { Project } from "../../types";
 import { ViewProjectButton } from "../ui/ViewProjectButton";
-type project = Project;
+type Props = {
+  project: Project;
+  number: number;
+};
 
-export function ProjectCard({ project }: { project: project }) {
+export function ProjectCard({ project, number }: Props) {
   const hasThumbnail = Boolean(project.thumbnail);
 
   return (
     <div className="flex flex-col gap-2 w-fit">
-      <p className="text-xs">{project.id}</p>
+      <p className="text-xs">Project_{String(number).padStart(2, "0")}</p>
 
       <div
         className="relative overflow-hidden rounded-2xl border border-white

@@ -77,11 +77,11 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
             spaceBetween={20}
             onSwiper={handleOnSwiper}
           >
-            {slides.map((pair, idx) => (
-              <SwiperSlide key={idx}>
+            {slides.map((pair, index) => (
+              <SwiperSlide key={index}>
                 <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
                   {pair.map((p) => (
-                    <ProjectCard key={p.id} project={p} />
+                    <ProjectCard key={p.id} project={p} number={index + 1} />
                   ))}
                 </div>
               </SwiperSlide>

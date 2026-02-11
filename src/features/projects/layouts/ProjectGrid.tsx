@@ -10,12 +10,12 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 ">
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <div
           key={project.id}
           className="border border-white px-6 py-4 text-white"
         >
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} number={index + 1} />
         </div>
       ))}
     </div>
