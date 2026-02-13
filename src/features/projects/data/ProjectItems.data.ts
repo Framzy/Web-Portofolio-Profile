@@ -38,7 +38,7 @@ export const PROJECTS_ITEMS: Project[] = [
     id: "project_05",
     thumbnail: thumbnail05,
     title: "School Library App - Scholarship",
-    link: "#",
+    link: undefined,
     techBadges: [],
   },
 ];

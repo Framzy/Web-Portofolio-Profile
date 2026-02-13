@@ -1,25 +1,21 @@
 import type { Project } from "../../types";
 import { ViewProjectButton } from "../ui/ViewProjectButton";
+
 type Props = {
   project: Project;
   number: number;
 };
 
 export function ProjectCard({ project, number }: Props) {
-  const hasThumbnail = Boolean(project.thumbnail);
-
   return (
-    <div className="flex flex-col gap-2 w-fit">
+    <div className="flex flex-col gap-2 w-full">
       <p className="text-xs">Project_{String(number).padStart(2, "0")}</p>
 
-      <div
-        className="relative overflow-hidden rounded-2xl border border-white
-          w-xs h-45 sm:w-md sm:h-55 md:w-lg md:h-70 lg:w-sm lg:h-60 xl:w-md 2xl:w-xl 2xl:h-85"
-      >
-        {hasThumbnail ? (
+      <div className="relative group overflow-hidden rounded-2xl border border-white w-full aspect-video">
+        {project.thumbnail ? (
           <img
             src={project.thumbnail}
-            alt={`Thumbnail project ${project.title}`}
+            alt={project.title}
             loading="lazy"
             className="w-full h-full object-cover"
           />
@@ -31,8 +27,10 @@ export function ProjectCard({ project, number }: Props) {
           </div>
         )}
 
-        {/* Overlay Button */}
-        <div className="absolute inset-0 flex items-end p-4 bg-black/0 hover:bg-black/40 transition">
+        <div
+          className="absolute inset-0 flex items-end p-4 bg-black/0 
+                        group-hover:bg-black/40 transition"
+        >
           <ViewProjectButton link={project.link} />
         </div>
       </div>
