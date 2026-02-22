@@ -1,17 +1,14 @@
-import { ConnectDesktop } from "./components/ConnectDekstop";
-import { ConnectMobile } from "./components/ConnectMobile";
+import ConnectsLayout from "./layouts/ConnectsLayout";
+import type { ConnectView } from "./types";
 
-type Props = {
+type ConnectSectionProps = {
+  view: ConnectView;
   openConnect: boolean;
-  display?: "desktop" | "mobile";
 };
 
-export default function ConnectSection({ openConnect, display }: Props) {
-  switch (display) {
-    case "desktop":
-      return ConnectDesktop(openConnect);
-    case "mobile":
-      return ConnectMobile(openConnect);
-  }
-  return null;
+export default function ConnectSection({
+  view,
+  openConnect,
+}: ConnectSectionProps) {
+  return <ConnectsLayout view={view} openConnect={openConnect} />;
 }

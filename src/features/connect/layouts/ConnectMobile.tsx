@@ -1,6 +1,10 @@
 import { CONNECT_ITEMS } from "../data/ConnectItems.data";
 
-export function ConnectMobile(openConnect: boolean) {
+type Props = {
+  openConnect: boolean;
+};
+
+export default function ConnectMobile({ openConnect }: Props) {
   return (
     <>
       <ul

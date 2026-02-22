@@ -1,9 +1,9 @@
-import type { Project } from "../types";
+import type { Project, ProjectsView } from "../types";
 import ProjectGrid from "./ProjectGrid";
 import ProjectsSwiper from "./ProjectSwiper";
 
 type ProjectsLayoutProps = {
-  view: "grid" | "swiper";
+  view: ProjectsView;
   projects: Project[];
 };
 

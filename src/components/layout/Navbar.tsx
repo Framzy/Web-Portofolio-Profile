@@ -110,7 +110,7 @@ export default function Navbar({ onNavigate }: Props) {
                 }`}
               />
             </button>
-            {ConnectSection({ display: "desktop", openConnect })}
+            <ConnectSection view="desktop" openConnect={openConnect} />
           </li>
         </ul>
 
@@ -179,8 +179,7 @@ export default function Navbar({ onNavigate }: Props) {
                   }`}
                 />
               </button>
-
-              {ConnectSection({ display: "mobile", openConnect })}
+              <ConnectSection view="mobile" openConnect={openConnect} />
             </li>
 
             <li className="pt-2">

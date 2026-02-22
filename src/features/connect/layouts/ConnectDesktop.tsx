@@ -1,8 +1,12 @@
 import { FaArrowUp } from "react-icons/fa";
-import { DropdownBackground } from "../../../components/ui/DropdownBackground";
+import { DropdownBackground } from "../components/ui/DropdownBackground";
 import { CONNECT_ITEMS } from "../data/ConnectItems.data";
 
-export function ConnectDesktop(openConnect: boolean) {
+type Props = {
+  openConnect: boolean;
+};
+
+export default function ConnectDesktop({ openConnect }: Props) {
   return (
     <div
       className={`absolute top-full left-1/2 -translate-x-1/2 mt-8 w-md lg:w-lg max-w-lg z-50
@@ -14,7 +18,6 @@ export function ConnectDesktop(openConnect: boolean) {
         }
       `}
     >
-      {/* SVG Background */}
       <div
         className={`absolute inset-0 z-0 transition-all duration-300 delay-75 ease-in-out transform 
           ${openConnect ? "opacity-100 scale-100" : "opacity-0 scale-95"}
@@ -23,7 +26,6 @@ export function ConnectDesktop(openConnect: boolean) {
         <DropdownBackground />
       </div>
 
-      {/* Content */}
       <ul className="relative z-10 grid grid-cols-2 text-sm font-manrope p-6">
         {CONNECT_ITEMS.map((item) => (
           <li key={item.label}>

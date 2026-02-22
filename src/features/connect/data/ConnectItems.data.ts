@@ -1,4 +1,6 @@
-export const CONNECT_ITEMS: { label: string; href: string; desc: string }[] = [
+import type { ConnectItem } from "../types";
+
+export const CONNECT_ITEMS: ConnectItem[] = [
   {
     label: "LinkedIn",
     href: "#",
