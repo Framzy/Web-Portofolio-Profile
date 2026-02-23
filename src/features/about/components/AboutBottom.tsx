@@ -1,47 +1,11 @@
-import { HOBBIES_ITEMS } from "./../data/HobbiesItems.data";
-import { LANGUAGES_ITEMS } from "../data/HobbiesItems.data";
 import EducationIcon from "../../../assets/about/images/icons/education_icon.webp";
 import ExperienceIcon from "../../../assets/about/images/icons/experience_icon.webp";
 import LanguagesIcon from "../../../assets/about/images/icons/languages_icon.webp";
 import HobbiesIcon from "../../../assets/about/images/icons/hobbies_icon.webp";
+import AboutLanguages from "./layout/AboutLanguages";
+import AboutHobbies from "./layout/AboutHobbies";
 
 export default function AboutBottom() {
-  const renderLanguagesItems = () => {
-    return LANGUAGES_ITEMS.map((item, index) => (
-      <div
-        key={index}
-        className="text-white text-sm flex justify-between gap-5 items-center"
-      >
-        <p className="">{item.label}</p>
-        <div className="flex flex-row items-center gap-1">
-          <div className="w-30 h-3 rounded-2xl border border-zinc-400">
-            <div
-              className={` ${item.width} h-full rounded-2xl bg-[#39EEFA]`}
-            ></div>
-          </div>
-          <p className="text-zinc-400 text-xs">{item.persen}</p>
-        </div>
-      </div>
-    ));
-  };
-
-  const renderHobbiesItems = () => {
-    return HOBBIES_ITEMS.map((item, index) => (
-      <div key={index} className="flex flex-col items-center gap-1">
-        <div className="h-5">
-          <img
-            className="w-auto h-full"
-            src={item.src}
-            alt={item.alt}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        <p className="text-zinc-500 text-xs">{item.label}</p>
-      </div>
-    ));
-  };
-
   return (
     <>
       <div className="grid grid-cols-1 w-5/6 lg:w-5/7 xl:w-5/8 p-10 mx-auto box-border gap-10 md:grid-cols-2 ">
@@ -113,7 +77,7 @@ export default function AboutBottom() {
           </div>
 
           <div className="flex flex-col font-manrope h-fit gap-1 ml-9 lg:ml-11 w-fit">
-            {renderLanguagesItems()}
+            <AboutLanguages />
           </div>
         </div>
 
@@ -132,7 +96,7 @@ export default function AboutBottom() {
           </div>
 
           <div className="flex flex-row flex-wrap font-bold ml-10  xl:ml-12 items-center justify-start xl:justify-start gap-4">
-            {renderHobbiesItems()}
+            <AboutHobbies />
           </div>
         </div>
       </div>

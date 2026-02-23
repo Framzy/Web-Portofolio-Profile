@@ -9,3 +9,5 @@ export type LanguagesItem = {
   persen: string;
   width: string;
 };
+
+export type PersonalDescription = string;

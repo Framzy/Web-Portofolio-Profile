@@ -1,4 +1,4 @@
-import type { HobbiesItem, LanguagesItem } from "../types";
+import type { HobbiesItem, LanguagesItem, PersonalDescription } from "../types";
 import codingIcon from "../../../assets/about/images/icons/Coding.webp";
 import GameIcon from "../../../assets/about/images/icons/Game.webp";
 import MusicIcon from "../../../assets/about/images/icons/Music.webp";
@@ -19,3 +19,7 @@ export const LANGUAGES_ITEMS: LanguagesItem[] = [
   { label: "Indonesia", persen: "90%", width: "w-27" },
   { label: "English", persen: "70%", width: "w-23" },
 ];
+
+export const Personal_Description: PersonalDescription =
+  "lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Lorem ipsum dolor sit amet " +
+  "consectetur adipisicing elit. Voluptas, doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.";
