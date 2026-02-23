@@ -1,13 +1,9 @@
 import { HOBBIES_ITEMS } from "./../data/HobbiesItems.data";
+import { LANGUAGES_ITEMS } from "../data/HobbiesItems.data";
 import EducationIcon from "../../../assets/about/images/icons/education_icon.webp";
 import ExperienceIcon from "../../../assets/about/images/icons/experience_icon.webp";
 import LanguagesIcon from "../../../assets/about/images/icons/languages_icon.webp";
 import HobbiesIcon from "../../../assets/about/images/icons/hobbies_icon.webp";
-
-const LANGUAGES_ITEMS: { label: string; persen: string; width: string }[] = [
-  { label: "Indonesia", persen: "90%", width: "w-27" },
-  { label: "English", persen: "70%", width: "w-23" },
-];
 
 export default function AboutBottom() {
   const renderLanguagesItems = () => {

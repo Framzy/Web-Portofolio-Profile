@@ -1,11 +1,11 @@
-import type { Project } from "../types";
+import type { ProjectItem } from "../types";
 import thumbnail01 from "../../../assets/projects/images/thumbnails/thumbnail_project01.webp";
 import thumbnail02 from "../../../assets/projects/images/thumbnails/thumbnail_project02.webp";
 import thumbnail03 from "../../../assets/projects/images/thumbnails/thumbnail_project03.webp";
 import thumbnail04 from "../../../assets/projects/images/thumbnails/thumbnail_project04.webp";
 import thumbnail05 from "../../../assets/projects/images/thumbnails/thumbnail_project05.webp";
 
-export const PROJECTS_ITEMS: Project[] = [
+export const PROJECTS_ITEMS: ProjectItem[] = [
   {
     id: "project_01",
     thumbnail: thumbnail01,

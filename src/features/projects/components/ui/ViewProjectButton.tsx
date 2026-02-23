@@ -1,8 +1,8 @@
 import { FaArrowUp } from "react-icons/fa";
-import type { Project } from "../../types";
+import type { ProjectItem } from "../../types";
 
 type Props = {
-  link?: Project["link"];
+  link?: ProjectItem["link"];
 };
 
 export function ViewProjectButton({ link }: Props) {

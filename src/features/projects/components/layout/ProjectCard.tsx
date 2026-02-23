@@ -1,8 +1,8 @@
-import type { Project } from "../../types";
+import type { ProjectItem } from "../../types";
 import { ViewProjectButton } from "../ui/ViewProjectButton";
 
 type Props = {
-  project: Project;
+  project: ProjectItem;
   number: number;
 };
 
