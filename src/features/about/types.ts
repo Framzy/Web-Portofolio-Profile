@@ -11,6 +11,7 @@ export type LanguagesItem = {
 };
 
 export type AboutBottomIcon = {
+  id: "education" | "experience" | "languages" | "hobbies";
   src: string;
   alt: string;
 };

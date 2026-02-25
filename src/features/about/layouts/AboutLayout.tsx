@@ -1,12 +1,18 @@
 import type { Props } from "../../../types/propsNavigate";
+import type { AboutBottomIcon as IconType } from "../types";
 import AboutTop from "./AboutTop";
 import AboutBottom from "./AboutBottom";
 
-export default function AboutLayout({ onNavigate }: Props) {
+type AboutLayoutProps = {
+  onNavigate: Props["onNavigate"];
+  ICONS: IconType[];
+};
+
+export default function AboutLayout({ onNavigate, ICONS }: AboutLayoutProps) {
   return (
     <>
       <AboutTop onNavigate={onNavigate} />
-      <AboutBottom />
+      <AboutBottom ICONS={ICONS} />
     </>
   );
 }

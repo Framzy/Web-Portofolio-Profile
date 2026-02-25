@@ -1,8 +1,8 @@
 import { ProjectCard } from "../components/layout/ProjectCard";
-import type { Project } from "../types";
+import type { ProjectItem } from "../types";
 
 type ProjectsGridProps = {
-  projects: Project[];
+  projects: ProjectItem[];
 };
 
 export default function ProjectsGrid({ projects }: ProjectsGridProps) {

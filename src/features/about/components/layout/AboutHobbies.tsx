@@ -1,6 +1,6 @@
 import { HOBBIES_ITEMS } from "../../data/AboutItems.data";
 
-export default function renderHobbiesItems() {
+export default function AboutHobbies() {
   return HOBBIES_ITEMS.map((item) => (
     <div key={item.label} className="flex flex-col items-center gap-1">
       <div className="h-5">

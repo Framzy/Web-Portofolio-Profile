@@ -30,10 +30,10 @@ export const LANGUAGES_ITEMS: LanguagesItem[] = [
 ];
 
 export const ABOUT_BOTTOM_ICONS: AboutBottomIcon[] = [
-  { src: EducationIcon, alt: "education icon" },
-  { src: ExperienceIcon, alt: "experience icon" },
-  { src: LanguagesIcon, alt: "languages icon" },
-  { src: HobbiesIcon, alt: "hobbies icon" },
+  { id: "education", src: EducationIcon, alt: "education icon" },
+  { id: "experience", src: ExperienceIcon, alt: "experience icon" },
+  { id: "languages", src: LanguagesIcon, alt: "languages icon" },
+  { id: "hobbies", src: HobbiesIcon, alt: "hobbies icon" },
 ];
 
 export const Personal_Description: PersonalDescription =
