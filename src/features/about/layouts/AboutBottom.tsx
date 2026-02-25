@@ -2,8 +2,8 @@ import EducationIcon from "../../../assets/about/images/icons/education_icon.web
 import ExperienceIcon from "../../../assets/about/images/icons/experience_icon.webp";
 import LanguagesIcon from "../../../assets/about/images/icons/languages_icon.webp";
 import HobbiesIcon from "../../../assets/about/images/icons/hobbies_icon.webp";
-import AboutLanguages from "./layout/AboutLanguages";
-import AboutHobbies from "./layout/AboutHobbies";
+import AboutLanguages from "../components/layout/AboutLanguages";
+import AboutHobbies from "../components/layout/AboutHobbies";
 
 export default function AboutBottom() {
   return (

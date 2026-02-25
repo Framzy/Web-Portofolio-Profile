@@ -1,10 +1,10 @@
-import type { Project, ProjectsView } from "../types";
+import type { ProjectItem, ProjectsView } from "../types";
 import ProjectGrid from "./ProjectGrid";
 import ProjectsSwiper from "./ProjectSwiper";
 
 type ProjectsLayoutProps = {
   view: ProjectsView;
-  projects: Project[];
+  projects: ProjectItem[];
 };
 
 export default function ProjectsLayoyut({

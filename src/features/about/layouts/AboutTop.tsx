@@ -1,8 +1,8 @@
 import type { Props } from "../../../types/propsNavigate";
 import ProfileImg from "../../../assets/images/Profile_Framzy.webp";
-import ContactMeButton from "./ui/ContactMeButton";
-import PersonalDescription from "./ui/PersonalDescription";
-import SeeProjectButton from "./ui/SeeProjectButton";
+import ContactMeButton from "../components/ui/ContactMeButton";
+import PersonalDescription from "../components/ui/PersonalDescription";
+import SeeProjectButton from "../components/ui/SeeProjectButton";
 
 export default function AboutTop({ onNavigate }: Props) {
   const onToProject = () => {
