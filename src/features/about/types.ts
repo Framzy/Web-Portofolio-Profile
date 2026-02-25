@@ -10,4 +10,9 @@ export type LanguagesItem = {
   width: string;
 };
 
+export type AboutBottomIcon = {
+  src: string;
+  alt: string;
+};
+
 export type PersonalDescription = string;
