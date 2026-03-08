@@ -29,7 +29,7 @@ export default function HomePage() {
                     }
                   `}
       >
-        <div className="absolute inset-0 bg-linear-to-t from-[#000000db] to-transparent">
+        <div className="absolute inset-0 bg-linear-to-b from-black/10 from-10% via-black/40 via-50% to-black">
           <button
             type="button"
             aria-label="Scroll down"
