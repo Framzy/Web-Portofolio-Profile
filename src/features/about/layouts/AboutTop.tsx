@@ -1,7 +1,7 @@
 import type { Props } from "../../../types/propsNavigate";
-import ProfileImg from "../../../assets/images/Profile_Framzy.webp";
 import ContactMeButton from "../components/ui/ContactMeButton";
 import PersonalDescription from "../components/ui/PersonalDescription";
+import ProfileImage from "../components/ui/ProfileImage";
 import SeeProjectButton from "../components/ui/SeeProjectButton";
 
 export default function AboutTop({ onNavigate }: Props) {
@@ -25,13 +25,7 @@ export default function AboutTop({ onNavigate }: Props) {
       <div className="flex flex-col w-5/6 xl:w-4/6 mx-auto box-border ">
         <div className="flex flex-col md:flex-row justify-center gap-10 box-border">
           <div className="w-fit max-w-90 mx-auto">
-            <img
-              className="w-full h-auto"
-              src={ProfileImg}
-              alt="profile image"
-              fetchPriority="high"
-              decoding="async"
-            />
+            <ProfileImage />
           </div>
 
           <div className="flex flex-col w-4/5 md:w-3/7 mx-auto pt-5 ">
