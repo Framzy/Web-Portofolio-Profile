@@ -1,9 +1,10 @@
+import type { CvFile } from "../../types/CvTypes";
+
 type Props = {
-  href: string;
-  fileName: string;
+  cvFile: CvFile;
 };
 
-export default function DownloadCvButton({ href, fileName }: Props) {
+export default function DownloadCvButton({ cvFile }: Props) {
   return (
     <>
       <div
@@ -12,8 +13,8 @@ export default function DownloadCvButton({ href, fileName }: Props) {
         "
       >
         <a
-          href={href}
-          download={fileName}
+          href={cvFile.href}
+          download={cvFile.fileName}
           className="flex items-center justify-center h-full w-full"
         >
           DOWNLOAD CV
