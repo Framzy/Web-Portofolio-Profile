@@ -1,5 +1,5 @@
 import type { Swiper as SwiperType } from "swiper";
-import type { Project } from "../types";
+import type { ProjectItem } from "../types";
 import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 type ProjectsSwiperProps = {
-  projects: Project[];
+  projects: ProjectItem[];
 };
 
 function chunk<T>(arr: T[], size = 2): T[][] {
