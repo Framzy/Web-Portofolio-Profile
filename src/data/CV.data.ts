@@ -3,7 +3,7 @@ type CvFile = {
   fileName: string;
 };
 
-export const CVFileData: CvFile = {
+export const CVData: CvFile = {
   href: "/cv_file/cv.pdf",
   fileName: "Farden_Ramzy_Muharram_CV.pdf",
 };
