@@ -1,4 +1,7 @@
-import type { CvFile } from "../../types/CvTypes";
+type CvFile = {
+  href: string;
+  fileName: string;
+};
 
 type Props = {
   cvFile: CvFile;
