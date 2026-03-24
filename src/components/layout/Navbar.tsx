@@ -5,7 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { RxCaretDown } from "react-icons/rx";
 import DownloadCvButton from "../ui/DownloadCvButton";
 import ConnectSection from "../../features/connect/ConnectSection";
-import { CvFileData } from "../../data/CVFile.data";
+import { CVFileData } from "../../data/CVFile.data";
 
 const NAV_ITEMS: { label: string; section: Section }[] = [
   { label: "ABOUT", section: "about" },
@@ -120,7 +120,7 @@ export default function Navbar({ onNavigate }: Props) {
             className={` transition-opacity duration-200 delay-75 ease-in-out
              ${open ? "opacity-0 scale-0" : " opacity-100 scale-100"} `}
           >
-            <DownloadCvButton cvFile={CvFileData} />
+            <DownloadCvButton cvFile={CVFileData} />
           </div>
 
           <button
@@ -181,7 +181,7 @@ export default function Navbar({ onNavigate }: Props) {
             </li>
 
             <li className="pt-2">
-              <DownloadCvButton cvFile={CvFileData} />
+              <DownloadCvButton cvFile={CVFileData} />
             </li>
           </ul>
         </div>
