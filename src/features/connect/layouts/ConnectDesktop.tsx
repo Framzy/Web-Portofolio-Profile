@@ -32,6 +32,8 @@ export default function ConnectDesktop({ openConnect }: Props) {
             <div className="p-3">
               <a
                 href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white font-medium underline underline-offset-2 hover:text-[#39EEFA]"
               >
                 {item.label}

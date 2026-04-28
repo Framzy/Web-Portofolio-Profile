@@ -37,5 +37,7 @@ export const ABOUT_BOTTOM_ICONS: AboutBottomIcon[] = [
 ];
 
 export const Personal_Description: PersonalDescription =
-  "lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Lorem ipsum dolor sit amet " +
-  "consectetur adipisicing elit. Voluptas, doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.";
+  "a Computer Science graduate excited to begin my career as a Software Engineer. " +
+  "Currently, I am focused on designing functional web interfaces while continuing to expand my knowledge in backend architecture " +
+  "and automated quality assurance (QA) testing to gain a comprehensive understanding of applications. I thoroughly enjoy the learning process, " +
+  "solving technical problems through logical reasoning, and turning lines of code into actual digital solutions.";

@@ -13,8 +13,8 @@ export default function AboutTop({ onNavigate }: Props) {
     <>
       <div className="flex flex-col w-4/5 lg:w-fit mx-auto box-border p-4">
         <div className="flex items-center justify-center font-manrope font-bold text-6xl box-border">
-          <p className="text-[#39EEFA]  md:text-center">
-            FRONT-END <span className="text-white">WEB DEVELOPER</span>
+          <p className="text-[#39EEFA]  md:text-center tracking-wide">
+            SOFTWARE <span className="text-white">ENGINEER</span>
           </p>
         </div>
         <p className="text-white font-manrope text-sm text-start md:text-center lg:text-start">

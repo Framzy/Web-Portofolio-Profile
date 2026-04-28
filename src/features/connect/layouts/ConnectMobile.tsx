@@ -20,7 +20,12 @@ export default function ConnectMobile({ openConnect }: Props) {
       >
         {CONNECT_ITEMS.map((item) => (
           <li key={item.label}>
-            <a href={item.href} className="text-[#c6c6c6] hover:text-white">
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#c6c6c6] hover:text-white"
+            >
               {item.label}
             </a>
           </li>
