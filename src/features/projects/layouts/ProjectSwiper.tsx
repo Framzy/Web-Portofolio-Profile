@@ -24,12 +24,6 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
   const swiperRef = useRef<SwiperType | null>(null);
   const paginationRef = useRef<HTMLDivElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
-  const slides = chunk(projects, 2);
-
-  function handleOnSwiper(sw: SwiperType) {
-    swiperRef.current = sw;
-    setSwiperReady((v) => !v);
-  }
 
   useEffect(() => {
     const s = swiperRef.current;
@@ -57,9 +51,20 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
     };
   }, [swiperReady]);
 
+  if (!projects.length) return null;
+  const projectsToShow = projects.filter((p) => p.isFeatured);
+  const slides = chunk(projectsToShow, 2);
+
+  function handleOnSwiper(sw: SwiperType) {
+    swiperRef.current = sw;
+    setSwiperReady((v) => !v);
+  }
+
   return (
     <>
-      <div className={`w-full flex flex-row items-center justify-center gap-5`}>
+      <div
+        className={`w-full h-fit flex flex-row items-center justify-center gap-2 md:gap-5`}
+      >
         <div className="left-slide-content">
           <button
             title="prevButton"
@@ -70,7 +75,7 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
           </button>
         </div>
 
-        <div className="slide-content border border-[#898989] w-8/10 ">
+        <div className="slide-content border border-[#898989] w-full">
           <Swiper
             modules={[Pagination]}
             slidesPerView={1}
@@ -79,7 +84,7 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
           >
             {slides.map((pair, index) => (
               <SwiperSlide key={index}>
-                <div className="h-fit px-8 py-3 gap-5 text-white flex flex-col items-center justify-center lg:flex-row">
+                <div className="grid grid-rows-2 grid-cols-none md:grid-cols-2 md:grid-rows-none items-center justify-center px-8 py-3 gap-5 text-white">
                   {pair.map((p) => (
                     <ProjectCard key={p.id} project={p} number={index + 1} />
                   ))}

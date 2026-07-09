@@ -12,6 +12,7 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     title: "Contact Management",
     link: "https://contact-management-khaki.vercel.app/",
     techBadges: [],
+    isFeatured: true,
   },
   {
     id: "project_02",
@@ -19,6 +20,7 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     title: "Kedai Takjil",
     link: "https://kedai-takjil.vercel.app/",
     techBadges: [],
+    isFeatured: true,
   },
   {
     id: "project_03",
@@ -26,6 +28,7 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     title: "Tic Tac Toe",
     link: "https://framzy-react-tic-tac-toe.vercel.app/",
     techBadges: [],
+    isFeatured: true,
   },
   {
     id: "project_04",
@@ -33,6 +36,7 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     title: "Posyandu APP - Thesis",
     link: "https://github.com/Framzy/PosyanduApp-Thesis-Application",
     techBadges: [],
+    isFeatured: false,
   },
   {
     id: "project_05",
@@ -40,5 +44,6 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     title: "School Library App - Scholarship",
     link: undefined,
     techBadges: [],
+    isFeatured: false,
   },
 ];
