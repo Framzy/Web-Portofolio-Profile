@@ -79,9 +79,11 @@ export default function Navbar({ onNavigate }: Props) {
     <nav className="bg-[#0A090F] border-b border-[#8A8A8A] relative z-50">
       <div className="max-w-full mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
-        <h1 className="text-white font-bold font-vollkorn">FRAMZY.</h1>
+        <div className="flex items-center md:w-50 lg:w-57">
+          <h1 className=" text-white font-bold font-vollkorn">FRAMZY.</h1>
+        </div>
 
-        <ul className="hidden md:flex items-center gap-7 xl:gap-12 text-white font-manrope text-sm  ">
+        <ul className="hidden  md:flex items-center gap-7 xl:gap-12 text-white font-manrope text-sm">
           {NAV_ITEMS.map((item) => (
             <li key={item.section}>
               <button
