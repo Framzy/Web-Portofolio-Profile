@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import type { Props } from "../../../types/propsNavigate";
-import { fadeIn, fadeInRight, fadeInLeft } from "../../../utils/motionVariants";
+import {
+  fadeIn,
+  fadeInRight,
+  fadeInLeft,
+} from "../../../utils/motionVariants.ts";
 import ContactMeButton from "../components/ui/ContactMeButton";
 import PersonalDescription from "../components/ui/PersonalDescription";
 import ProfileImage from "../components/ui/ProfileImage";

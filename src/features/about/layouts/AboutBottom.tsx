@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import type { AboutBottomIcon as IconType } from "../types";
-import { fadeInTop } from "../../../utils/motionVariants";
+import { fadeInTop } from "../../../utils/motionVariants.ts";
 import AboutLanguages from "../components/layout/AboutLanguages";
 import AboutHobbies from "../components/layout/AboutHobbies";
 import AboutBottomIcon from "../components/ui/AboutBottomIcon";
