@@ -14,7 +14,7 @@ export const SKILLS_ITEMS: { label: string; span: number; items: string[] }[] =
     {
       label: "Tools, Softwares, And Others",
       span: 2,
-      items: ["VS Code", "Git", "GitHub", "Antigravity", "Figma"],
+      items: ["VS Code", "Antigravity", "Git", "GitHub", "Vite", "Figma"],
     },
     { label: "Operating Systems", span: 1, items: ["Windows", "Mac"] },
     { label: "Cloud", span: 1, items: ["Vercel", "Supabase"] },
