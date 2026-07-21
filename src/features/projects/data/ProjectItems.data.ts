@@ -18,7 +18,7 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     id: "project_02",
     thumbnail: thumbnail02,
     title: "Kedai Takjil",
-    link: "https://kedai-takjil.vercel.app/",
+    link: "https://kedaitakjil-framzy.vercel.app/",
     techBadges: [],
     isFeatured: true,
   },

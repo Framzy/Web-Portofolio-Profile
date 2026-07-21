@@ -1,6 +1,8 @@
 export default function SeeAllProjectButton({
+  view,
   toggleView,
 }: {
+  view: string;
   toggleView: () => void;
 }) {
   return (
@@ -12,7 +14,7 @@ export default function SeeAllProjectButton({
                 transition-all duration-200 ease-in-out"
       onClick={toggleView}
     >
-      See all projects
+      {view === "grid" ? "Hide" : "Show"} all projects
     </button>
   );
 }

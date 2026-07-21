@@ -9,7 +9,7 @@ const ProjectSection = forwardRef<HTMLDivElement>(
     const { view, toggleView } = useProjectsView();
     return (
       <>
-        <section ref={ref} className="projects-content min-h-screen">
+        <section ref={ref} className="projects-content pt-16">
           <div className="skills-title w-8/10 mx-auto flex flex-row justify-between items-end py-5">
             <h1 className="text-3xl font-bold text-[#39EEFA]">
               MY <span className="text-white">PROJECTS</span>
@@ -20,7 +20,7 @@ const ProjectSection = forwardRef<HTMLDivElement>(
           </div>
           <div className="w-8/10 mx-auto flex justify-center flex-col items-center">
             <ProjectsLayout view={view} projects={PROJECTS_ITEMS} />
-            <SeeAllProjectButton toggleView={toggleView} />
+            <SeeAllProjectButton view={view} toggleView={toggleView} />
           </div>
         </section>
       </>
