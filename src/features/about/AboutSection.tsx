@@ -11,7 +11,7 @@ const AboutSection = forwardRef<HTMLDivElement, Props>(function AboutSection(
     <>
       <section
         ref={ref}
-        className="about-content min-h-screen relative overflow-hidden bg-[url('../assets/images/Background.webp')] bg-cover bg-center bg-no-repeat"
+        className="about-content relative overflow-hidden bg-[url('../assets/images/Background.webp')] bg-cover bg-center bg-no-repeat"
       >
         <AboutLayout onNavigate={onNavigate} ICONS={ICONS} />
       </section>
