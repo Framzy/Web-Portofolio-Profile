@@ -24,7 +24,7 @@ export default function AboutTop({ onNavigate }: Props) {
         <div className="w-full flex flex-col items-center justify-center box-border gap-2">
           <div className="w-full flex items-center justify-center md:justify-center box-border">
             <p className="text-[#39EEFA] font-manrope font-bold text-4xl md:text-5xl lg:text-6xl tracking-wide text-center">
-              SOFTWARE <span className="text-white">ENGINEER</span>
+              SOFTWARE <span className="text-white">DEVELOPER</span>
             </p>
           </div>
           <div className="w-full flex items-center justify-center md:justify-start box-border">
