@@ -37,7 +37,7 @@ export const ABOUT_BOTTOM_ICONS: AboutBottomIcon[] = [
 ];
 
 export const Personal_Description: PersonalDescription =
-  "a Computer Science graduate excited to begin my career as a Software Engineer. " +
+  "a Computer Science graduate excited to begin my career as a Software Developer. " +
   "Currently, I am focused on designing functional web interfaces while continuing to expand my knowledge in backend architecture " +
   "and automated quality assurance (QA) testing to gain a comprehensive understanding of applications. I thoroughly enjoy the learning process, " +
   "solving technical problems through logical reasoning, and turning lines of code into actual digital solutions.";
