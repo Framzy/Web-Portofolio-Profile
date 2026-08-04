@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import type { Swiper as SwiperType } from "swiper";
 import type { ProjectItem } from "../types";
 import { useEffect, useRef, useState } from "react";
@@ -7,6 +8,7 @@ import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import { ProjectCard } from "../components/layout/ProjectCard";
 import "swiper/css";
 import "swiper/css/pagination";
+import { fadeIn } from "../../../utils/motionVariants";
 
 type ProjectsSwiperProps = {
   projects: ProjectItem[];
@@ -62,7 +64,10 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
 
   return (
     <>
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
         className={`w-full h-fit flex flex-row items-center justify-center gap-2 md:gap-5`}
       >
         <div className="left-slide-content">
@@ -103,7 +108,7 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
             <FaArrowRightLong size={20} className="text-white" />
           </button>
         </div>
-      </div>
+      </motion.div>
 
       <div
         ref={paginationRef}
