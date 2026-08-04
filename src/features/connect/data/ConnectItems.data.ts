@@ -18,7 +18,7 @@ export const CONNECT_ITEMS: ConnectItem[] = [
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/framzy23_/",
     desc: "Follow my Instagram for visual insights into my projects and inspirations.",
   },
 ];
