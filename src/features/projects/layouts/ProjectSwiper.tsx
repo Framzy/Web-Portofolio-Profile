@@ -8,7 +8,6 @@ import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import { ProjectCard } from "../components/layout/ProjectCard";
 import "swiper/css";
 import "swiper/css/pagination";
-import { fadeIn } from "../../../utils/motionVariants";
 
 type ProjectsSwiperProps = {
   projects: ProjectItem[];
