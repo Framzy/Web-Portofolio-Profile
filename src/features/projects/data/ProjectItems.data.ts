@@ -4,6 +4,7 @@ import thumbnail02 from "../../../assets/projects/images/thumbnails/thumbnail_pr
 import thumbnail03 from "../../../assets/projects/images/thumbnails/thumbnail_project03.webp";
 import thumbnail04 from "../../../assets/projects/images/thumbnails/thumbnail_project04.webp";
 import thumbnail05 from "../../../assets/projects/images/thumbnails/thumbnail_project05.webp";
+import thumbnail06 from "../../../assets/projects/images/thumbnails/thumbnail_project06.webp";
 
 export const PROJECTS_ITEMS: ProjectItem[] = [
   {
@@ -45,5 +46,13 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     link: undefined,
     techBadges: [],
     isFeatured: false,
+  },
+  {
+    id: "project_06",
+    thumbnail: thumbnail06,
+    title: "Valorant Comp Analyzer",
+    link: "https://framzy-valorant-comp-analyzer.vercel.app/",
+    techBadges: [],
+    isFeatured: true,
   },
 ];
